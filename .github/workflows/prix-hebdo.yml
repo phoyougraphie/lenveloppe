@@ -1,0 +1,36 @@
+# Chaque lundi : relève les prix publics et collaboratifs, régénère data/prix.json, puis relance le déploiement.
+name: Prix hebdomadaires
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  prix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - name: Relevé des prix (RNM, Open Prices ~40 min, assemblage)
+        run: npm run prix
+      - run: npm run valider
+      - name: Publier les nouveaux prix
+        id: commit
+        run: |
+          git config user.name "lenveloppe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prix.json data/sources/*.json
+          if git diff --cached --quiet; then echo "change=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "Prix : relevé du $(date +%F)"
+          git push
+          echo "change=1" >> "$GITHUB_OUTPUT"
+      # Un push fait par le bot ne déclenche pas d'autre workflow : on relance le déploiement explicitement.
+      - if: steps.commit.outputs.change == '1'
+        run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
