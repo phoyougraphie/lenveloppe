@@ -1,0 +1,151 @@
+{
+ "_note": "Ordre par défaut d'un parcours de supermarché (surgelés en dernier, pour la chaîne du froid). Chaque personne peut réordonner sur la page Semaine.",
+ "ordre": [
+  {
+   "id": "fruits-legumes",
+   "nom": "Fruits et légumes"
+  },
+  {
+   "id": "boulangerie",
+   "nom": "Boulangerie"
+  },
+  {
+   "id": "boucherie",
+   "nom": "Boucherie, charcuterie"
+  },
+  {
+   "id": "poissonnerie",
+   "nom": "Poissonnerie"
+  },
+  {
+   "id": "cremerie",
+   "nom": "Crèmerie, œufs, fromages"
+  },
+  {
+   "id": "frais-vegetal",
+   "nom": "Tofu et frais végétal"
+  },
+  {
+   "id": "feculents",
+   "nom": "Pâtes, riz, semoule"
+  },
+  {
+   "id": "legumes-secs",
+   "nom": "Légumes secs"
+  },
+  {
+   "id": "conserves",
+   "nom": "Conserves, sauces tomate"
+  },
+  {
+   "id": "monde",
+   "nom": "Produits du monde"
+  },
+  {
+   "id": "farine-sucre",
+   "nom": "Farine, sucre, pâtisserie"
+  },
+  {
+   "id": "huiles-condiments",
+   "nom": "Huiles, vinaigres, condiments"
+  },
+  {
+   "id": "epices",
+   "nom": "Épices, sel, bouillon"
+  },
+  {
+   "id": "boissons",
+   "nom": "Laits et boissons végétales"
+  },
+  {
+   "id": "surgeles",
+   "nom": "Surgelés"
+  }
+ ],
+ "ingredients": {
+  "oignon": "fruits-legumes",
+  "ail": "fruits-legumes",
+  "carotte": "fruits-legumes",
+  "pomme-de-terre": "fruits-legumes",
+  "tomate": "fruits-legumes",
+  "courgette": "fruits-legumes",
+  "aubergine": "fruits-legumes",
+  "poivron": "fruits-legumes",
+  "poireau": "fruits-legumes",
+  "champignon-paris": "fruits-legumes",
+  "chou-vert": "fruits-legumes",
+  "brocoli": "fruits-legumes",
+  "fenouil": "fruits-legumes",
+  "betterave-cuite": "fruits-legumes",
+  "courge-butternut": "fruits-legumes",
+  "citron": "fruits-legumes",
+  "persil": "fruits-legumes",
+  "coriandre-fraiche": "fruits-legumes",
+  "basilic": "fruits-legumes",
+  "epinard-surgele": "surgeles",
+  "haricot-vert-surgele": "surgeles",
+  "petit-pois-surgele": "surgeles",
+  "poisson-blanc-surgele": "surgeles",
+  "tofu-nature": "frais-vegetal",
+  "creme-soja": "frais-vegetal",
+  "oeuf": "cremerie",
+  "beurre": "cremerie",
+  "creme-fraiche": "cremerie",
+  "lait": "cremerie",
+  "emmental-rape": "cremerie",
+  "parmesan": "cremerie",
+  "boeuf-hache": "boucherie",
+  "cuisse-poulet": "boucherie",
+  "blanc-poulet": "boucherie",
+  "chorizo": "boucherie",
+  "saucisse-toulouse": "boucherie",
+  "lardon": "boucherie",
+  "saumon-pave": "poissonnerie",
+  "lentille-corail": "legumes-secs",
+  "lentille-verte": "legumes-secs",
+  "pois-casse": "legumes-secs",
+  "haricot-blanc-sec": "legumes-secs",
+  "riz-blanc": "feculents",
+  "pates": "feculents",
+  "pates-sans-gluten": "feculents",
+  "feuille-lasagne": "feculents",
+  "semoule": "feculents",
+  "haricot-blanc-conserve": "conserves",
+  "haricot-rouge-conserve": "conserves",
+  "pois-chiche-conserve": "conserves",
+  "tomate-concassee-conserve": "conserves",
+  "concentre-tomate": "conserves",
+  "mais-conserve": "conserves",
+  "olive-noire": "conserves",
+  "thon-conserve": "conserves",
+  "sardine-conserve": "conserves",
+  "tortilla-ble": "monde",
+  "lait-coco": "monde",
+  "sauce-soja": "monde",
+  "baguette": "boulangerie",
+  "farine-ble": "farine-sucre",
+  "fecule-mais": "farine-sucre",
+  "sucre": "farine-sucre",
+  "huile-olive": "huiles-condiments",
+  "huile-tournesol": "huiles-condiments",
+  "vinaigre": "huiles-condiments",
+  "moutarde": "huiles-condiments",
+  "cacahuete": "huiles-condiments",
+  "bouillon-cube": "epices",
+  "sel": "epices",
+  "poivre": "epices",
+  "cumin": "epices",
+  "paprika": "epices",
+  "curcuma": "epices",
+  "curry-poudre": "epices",
+  "piment-poudre": "epices",
+  "gingembre-moulu": "epices",
+  "coriandre-moulue": "epices",
+  "cannelle": "epices",
+  "muscade": "epices",
+  "herbes-provence": "epices",
+  "thym": "epices",
+  "laurier": "epices",
+  "boisson-soja": "boissons"
+ }
+}

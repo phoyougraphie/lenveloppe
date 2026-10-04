@@ -1,0 +1,100 @@
+{
+  "numero": 30,
+  "slug": "salade-nicoise-au-thon",
+  "titre": "Salade niçoise au thon",
+  "chapeau": "Pommes de terre rôties, œufs durs, thon et olives : une salade qui fait un vrai repas.",
+  "portions": 4,
+  "prep_min": 20,
+  "cuisson_min": 20,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 450,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 45,
+      "unite": "ml"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "vinaigre",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "haricot-vert-surgele",
+      "qte": 200,
+      "unite": "g"
+    },
+    {
+      "ref": "olive-noire",
+      "qte": 50,
+      "unite": "g"
+    },
+    {
+      "ref": "thon-conserve",
+      "qte": 280,
+      "unite": "g"
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Préchauffe le four à 200 °C.",
+    "Coupe les pommes de terre en dés, mélange-les avec un peu d'huile et de sel, et enfourne 20 min.",
+    "Fais cuire les œufs 9 min dans l'eau bouillante, refroidis-les et écale-les.",
+    "Fais cuire les haricots verts 6 min à l'eau bouillante et rafraîchis-les.",
+    "Mélange le reste d'huile avec le vinaigre, le sel et le poivre.",
+    "Dans un saladier, mets les pommes de terre, les haricots, les tomates en quartiers et l'oignon émincé.",
+    "Ajoute le thon émietté, les olives et les œufs coupés en deux. Arrose de vinaigrette."
+  ],
+  "variantes": [
+    {
+      "titre": "Végétarienne aux pois chiches",
+      "regime": "vegetarien",
+      "remplace": [
+        {
+          "de": "thon-conserve",
+          "par": {
+            "ref": "pois-chiche-conserve",
+            "qte": 240,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Se prépare le matin pour le soir : garde la vinaigrette à part jusqu'au dernier moment.",
+  "source": {
+    "type": "themealdb",
+    "id": "52852",
+    "url": "https://www.themealdb.com/meal/52852"
+  },
+  "statut": "non-testee"
+}

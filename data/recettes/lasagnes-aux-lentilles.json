@@ -1,0 +1,105 @@
+{
+  "numero": 21,
+  "slug": "lasagnes-aux-lentilles",
+  "titre": "Lasagnes aux lentilles et épinards",
+  "chapeau": "Des lasagnes sans viande ni fromage, avec une béchamel au lait de soja.",
+  "portions": 4,
+  "prep_min": 30,
+  "cuisson_min": 45,
+  "ingredients": [
+    {
+      "ref": "lentille-corail",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "carotte",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "courgette",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "epinard-surgele",
+      "qte": 300,
+      "unite": "g"
+    },
+    {
+      "ref": "feuille-lasagne",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 40,
+      "unite": "ml"
+    },
+    {
+      "ref": "farine-ble",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "boisson-soja",
+      "qte": 600,
+      "unite": "ml"
+    },
+    {
+      "ref": "moutarde",
+      "qte": 10,
+      "unite": "g"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "muscade",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Coupe la carotte, l'oignon et la courgette en petits dés.",
+    "Fais-les cuire 5 min dans une casserole avec 600 ml d'eau et le cube.",
+    "Ajoute les lentilles rincées et les tomates. Laisse mijoter 20 min, jusqu'à ce que les lentilles soient fondantes.",
+    "Fais décongeler les épinards à la poêle et presse-les.",
+    "Pour la béchamel, chauffe l'huile, ajoute la farine et remue 1 min.",
+    "Verse le lait de soja petit à petit en fouettant, jusqu'à ce que ça épaississe. Ajoute la moutarde, la muscade, le sel.",
+    "Préchauffe le four à 180 °C.",
+    "Monte les couches dans un plat : sauce lentilles, feuilles, épinards, béchamel. Termine par la béchamel.",
+    "Enfourne 25 à 30 min."
+  ],
+  "variantes": [],
+  "note": "Laisse reposer 10 min avant de couper. Se congèle en parts.",
+  "source": {
+    "type": "themealdb",
+    "id": "52775",
+    "url": "https://www.themealdb.com/meal/52775"
+  },
+  "statut": "non-testee"
+}

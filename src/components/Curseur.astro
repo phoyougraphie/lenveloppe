@@ -1,0 +1,10 @@
+---
+// Le curseur : premier prix / moyen / bio. Le choix est mémorisé localement.
+import { NIVEAUX, LIBELLE_NIVEAU } from '../lib/donnees';
+---
+<fieldset class="curseur" style="border:1.5px solid var(--encre);padding:0;margin:0">
+  <legend class="vh">Niveau de prix</legend>
+  {NIVEAUX.map((n) => (
+    <label><input type="radio" name="niveau" value={n} checked={n === 'moyen'} /><span>{LIBELLE_NIVEAU[n]}</span></label>
+  ))}
+</fieldset>

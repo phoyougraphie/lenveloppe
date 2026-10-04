@@ -1,0 +1,121 @@
+{
+  "numero": 18,
+  "slug": "soupe-a-l-oignon-gratinee",
+  "titre": "Soupe à l'oignon gratinée",
+  "chapeau": "Un kilo d'oignons qui caramélisent lentement, du pain et du fromage : le luxe pas cher.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 50,
+  "ingredients": [
+    {
+      "ref": "beurre",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1000,
+      "unite": "g"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "farine-ble",
+      "qte": 20,
+      "unite": "g"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "baguette",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "emmental-rape",
+      "qte": 120,
+      "unite": "g"
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Émince les oignons finement.",
+    "Fais-les fondre 10 min à couvert dans le beurre et l'huile.",
+    "Ajoute une pincée de sucre et laisse caraméliser 20 min à découvert, en remuant souvent.",
+    "Ajoute l'ail, saupoudre de farine et remue 1 min.",
+    "Verse 1 litre d'eau chaude et les cubes de bouillon, petit à petit. Laisse frémir 15 min.",
+    "Coupe le pain en tranches et fais-les griller.",
+    "Verse la soupe dans des bols allant au four, pose le pain, couvre de fromage.",
+    "Passe 3 min sous le gril du four."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "beurre",
+          "par": {
+            "ref": "huile-olive",
+            "qte": 40,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": [
+        "emmental-rape"
+      ]
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "farine-ble",
+          "par": {
+            "ref": "fecule-mais",
+            "qte": 15,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": [
+        "baguette"
+      ]
+    }
+  ],
+  "note": "La recette d'origine mouille au vin blanc ; on s'en passe très bien. Le pain un peu rassis est idéal.",
+  "source": {
+    "type": "themealdb",
+    "id": "52903",
+    "url": "https://www.themealdb.com/meal/52903"
+  },
+  "statut": "non-testee"
+}

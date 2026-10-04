@@ -1,0 +1,239 @@
+---
+import { B } from '../lib/lien';
+import Base from '../layouts/Base.astro';
+import { ingredients, RAYONS } from '../lib/donnees';
+const noms = Object.values(ingredients).map((i) => i.nom).sort((a, b) => a.localeCompare(b, 'fr'));
+---
+<Base titre="Ajouter ma recette" courant="/ajouter/">
+  <div style="padding:2.5rem 0 1rem">
+    <p class="etiquette" id="mode">Nouvelle recette · gardée sur cet appareil</p>
+    <h1 class="titre-xl">Ma recette</h1>
+  </div>
+
+  <form id="form" class="formulaire" novalidate>
+    <div class="champ">
+      <label for="titre">Nom du plat</label>
+      <input id="titre" name="titre" required maxlength="120" autocomplete="off" />
+    </div>
+    <div class="champ">
+      <label for="chapeau">En une phrase <span class="facultatif">facultatif</span></label>
+      <input id="chapeau" name="chapeau" maxlength="300" autocomplete="off" />
+    </div>
+    <div class="trio">
+      <div class="champ"><label for="portions">Pour combien</label><input id="portions" name="portions" type="number" inputmode="numeric" min="1" max="50" value="4" /></div>
+      <div class="champ"><label for="prep">Prépa (min)</label><input id="prep" name="prep" type="number" inputmode="numeric" min="0" value="15" /></div>
+      <div class="champ"><label for="cuisson">Cuisson (min)</label><input id="cuisson" name="cuisson" type="number" inputmode="numeric" min="0" value="0" /></div>
+    </div>
+
+    <fieldset class="champ">
+      <legend>Ingrédients</legend>
+      <p class="aide">Commence à taper : les ingrédients connus ont un prix. Un ingrédient nouveau est accepté, sans prix.</p>
+      <div id="lignes"></div>
+      <button type="button" class="bouton creux" id="ajout-ligne">+ Un ingrédient</button>
+    </fieldset>
+
+    <div class="champ">
+      <label for="etapes">Étapes <span class="facultatif">une par ligne</span></label>
+      <textarea id="etapes" name="etapes" rows="7"></textarea>
+    </div>
+    <div class="champ">
+      <label for="note">Note pour plus tard <span class="facultatif">facultatif</span></label>
+      <input id="note" name="note" maxlength="300" placeholder="ça tient 2 jours au frigo" autocomplete="off" />
+    </div>
+
+    <div class="ticket" style="margin:1rem 0">
+      <p class="etiquette" style="margin:0 0 .5rem">Classement automatique</p>
+      <p id="classement" class="mono caps" style="margin:0">—</p>
+      <p class="petit" style="margin:.5rem 0 0">Calculé d’après les ingrédients, comme pour toutes les recettes.</p>
+    </div>
+
+    <p id="erreur" class="mono" role="alert" style="font-weight:700"></p>
+    <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+      <button class="bouton" type="submit">Enregistrer</button>
+      <a class="bouton creux" href={`${B}/idees/`}>Annuler</a>
+    </div>
+  </form>
+
+  <datalist id="noms-ingredients">{noms.map((n) => <option value={n} />)}</datalist>
+
+  <template id="tpl-ligne">
+    <div class="ligne-ing">
+      <div class="ligne-ing-base">
+        <input class="nom" list="noms-ingredients" placeholder="ex. lentilles corail" aria-label="Ingrédient" autocomplete="off" />
+        <input class="qte" type="number" inputmode="decimal" min="0" step="any" placeholder="qté" aria-label="Quantité" />
+        <select class="unite" aria-label="Unité">
+          <option value="g">g</option><option value="ml">ml</option><option value="piece">pièce</option><option value="">à goût</option>
+        </select>
+        <button type="button" class="retirer" aria-label="Retirer cet ingrédient">×</button>
+      </div>
+      <div class="ligne-ing-nouveau" hidden>
+        <span class="petit">Nouvel ingrédient :</span>
+        <select class="rayon" aria-label="Rayon">{RAYONS.map((r) => <option value={r.id}>{r.nom}</option>)}</select>
+        <select class="animal" aria-label="Origine">
+          <option value="">Végétal</option><option value="viande">Viande</option><option value="poisson">Poisson</option>
+          <option value="laitier">Laitier</option><option value="oeuf">Œuf</option><option value="miel">Miel</option>
+        </select>
+        <label class="petit"><input type="checkbox" class="gluten" /> contient du gluten</label>
+      </div>
+    </div>
+  </template>
+</Base>
+
+<style>
+  .formulaire { max-width: 40rem; display: grid; gap: 1.4rem; }
+  .champ { display: grid; gap: .35rem; border: 0; padding: 0; margin: 0; min-width: 0; }
+  .champ > label, .champ > legend { font-family: var(--mono); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; padding: 0; }
+  .facultatif, .aide { font-family: var(--mono); font-size: 13px; font-weight: 400; text-transform: none; color: var(--encre-douce); letter-spacing: 0; }
+  .aide { margin: 0 0 .4rem; }
+  .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+  input, select, textarea {
+    font: inherit; font-family: var(--mono); font-size: 16px; color: var(--encre);
+    background: var(--papier-ticket); border: 1.5px solid var(--encre); border-radius: 0;
+    padding: 10px 12px; min-height: 44px; width: 100%;
+  }
+  textarea { font-family: var(--grot); font-size: 17px; line-height: 1.5; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--encre); outline-offset: 2px; }
+  :global(.ligne-ing) { border-bottom: 1px dashed var(--encre); padding: .6rem 0; display: grid; gap: .5rem; }
+  :global(.ligne-ing-base) { display: grid; grid-template-columns: minmax(0, 1fr) 5.5rem 7.5rem 44px; gap: .4rem; }
+  @media (max-width: 520px) { :global(.ligne-ing-base) { grid-template-columns: minmax(0, 1fr) 5rem 7.5rem 44px; } :global(.ligne-ing-base .nom) { grid-column: 1 / -1; } }
+  :global(.ligne-ing-nouveau) { display: flex; flex-wrap: wrap; gap: .4rem .8rem; align-items: center; }
+  :global(.ligne-ing-nouveau[hidden]) { display: none; }
+  :global(.ligne-ing-nouveau select) { width: auto; }
+  :global(.ligne-ing-nouveau input[type=checkbox]) { width: 20px; min-height: 20px; vertical-align: middle; }
+  :global(.retirer) { border: 1.5px solid var(--encre); background: none; font-size: 22px; cursor: pointer; color: var(--encre); }
+  #ajout-ligne { justify-self: start; margin-top: .6rem; }
+</style>
+
+<script>
+  import { B } from '../lib/lien';
+  import { ingredients, regimesDe, LIBELLE_REGIME, type Ingredient, type LigneRecette } from '../lib/calcul';
+  import { charger, obtenir, enregistrer, nouvelId, slugifier, type RecettePerso } from '../lib/mes-recettes';
+
+  charger();
+  const form = document.getElementById('form') as HTMLFormElement;
+  const zone = document.getElementById('lignes')!;
+  const tpl = document.getElementById('tpl-ligne') as HTMLTemplateElement;
+  const $ = <T extends HTMLElement>(el: ParentNode, s: string) => el.querySelector(s) as T;
+
+  const parNom = () => {
+    const m = new Map<string, string>();
+    for (const [ref, i] of Object.entries(ingredients)) m.set(i.nom.toLowerCase().trim(), ref);
+    return m;
+  };
+
+  function ajouterLigne(v?: { nom?: string; qte?: number | null; unite?: string | null; ing?: Ingredient }) {
+    const el = tpl.content.firstElementChild!.cloneNode(true) as HTMLElement;
+    zone.appendChild(el);
+    if (v) {
+      $<HTMLInputElement>(el, '.nom').value = v.nom ?? '';
+      $<HTMLInputElement>(el, '.qte').value = v.qte == null ? '' : String(v.qte);
+      $<HTMLSelectElement>(el, '.unite').value = v.unite ?? '';
+      if (v.ing?.perso) {
+        $<HTMLSelectElement>(el, '.rayon').value = v.ing.rayon_magasin ?? 'autres';
+        $<HTMLSelectElement>(el, '.animal').value = v.ing.animal ?? '';
+        $<HTMLInputElement>(el, '.gluten').checked = v.ing.gluten;
+      }
+    }
+    majLigne(el);
+    return el;
+  }
+
+  function majLigne(el: HTMLElement) {
+    const nom = $<HTMLInputElement>(el, '.nom').value.toLowerCase().trim();
+    const ref = parNom().get(nom);
+    const nouveau = !!nom && (!ref || ingredients[ref]?.perso);
+    $<HTMLElement>(el, '.ligne-ing-nouveau').hidden = !nouveau;
+    // Unité suggérée selon l'ingrédient connu
+    if (ref && !ingredients[ref].perso && !el.dataset.uniteTouchee) {
+      const i = ingredients[ref];
+      $<HTMLSelectElement>(el, '.unite').value = i.placard ? '' : i.poids_piece_g && i.unite_prix === 'piece' ? 'piece' : i.unite_prix === 'l' ? 'ml' : 'g';
+    }
+  }
+
+  /** Lit le formulaire et construit la recette (sans l'enregistrer). */
+  function lire(): RecettePerso {
+    const index = parNom();
+    const ingsPerso: Record<string, Ingredient> = {};
+    const lignes: LigneRecette[] = [];
+    for (const el of zone.querySelectorAll<HTMLElement>('.ligne-ing')) {
+      const nomBrut = $<HTMLInputElement>(el, '.nom').value.trim();
+      if (!nomBrut) continue;
+      let ref = index.get(nomBrut.toLowerCase());
+      if (!ref || ingredients[ref].perso) {
+        ref = ref ?? `perso-${slugifier(nomBrut)}`;
+        const animal = $<HTMLSelectElement>(el, '.animal').value || null;
+        ingsPerso[ref] = {
+          nom: nomBrut, rayon: 'perso', unite_prix: 'kg', poids_piece_g: null,
+          animal: animal as Ingredient['animal'], gluten: $<HTMLInputElement>(el, '.gluten').checked,
+          proteines_100g: null, placard: false, rayon_magasin: $<HTMLSelectElement>(el, '.rayon').value, perso: true,
+        };
+      }
+      const q = parseFloat($<HTMLInputElement>(el, '.qte').value.replace(',', '.'));
+      const unite = $<HTMLSelectElement>(el, '.unite').value || null;
+      lignes.push({ ref, qte: unite && Number.isFinite(q) && q > 0 ? q : null, unite: unite && Number.isFinite(q) && q > 0 ? (unite as LigneRecette['unite']) : null });
+    }
+    const v = (id: string) => (form.elements.namedItem(id) as HTMLInputElement).value.trim();
+    const titre = v('titre');
+    return {
+      id: existant?.id ?? nouvelId(), perso: true, numero: 0, slug: slugifier(titre), titre,
+      chapeau: v('chapeau'), portions: Math.max(1, parseInt(v('portions')) || 4),
+      prep_min: Math.max(0, parseInt(v('prep')) || 0), cuisson_min: Math.max(0, parseInt(v('cuisson')) || 0),
+      ingredients: lignes, etapes: v('etapes').split('\n').map((s) => s.trim()).filter(Boolean),
+      variantes: [], note: v('note') || null, source: { type: 'perso' }, statut: 'testee',
+      ingredients_perso: ingsPerso, cree_le: existant?.cree_le ?? new Date().toISOString(),
+    };
+  }
+
+  function majClassement() {
+    const r = lire();
+    const tmp = { ...ingredients };
+    Object.assign(ingredients, r.ingredients_perso);
+    const regimes = r.ingredients.length ? regimesDe(r.ingredients, r.portions) : [];
+    for (const k of Object.keys(r.ingredients_perso)) if (!(k in tmp)) delete ingredients[k];
+    const aff = regimes.includes('vegan') ? regimes.filter((x) => x !== 'vegetarien') : regimes;
+    document.getElementById('classement')!.textContent = r.ingredients.length
+      ? aff.map((x) => (x === 'vegan' ? 'Vegan (donc végétarien)' : LIBELLE_REGIME[x])).join(' · ') || 'Aucun régime particulier'
+      : '—';
+  }
+
+  // Mode modification
+  const id = new URLSearchParams(location.search).get('id');
+  const existant = id ? obtenir(id) : null;
+  if (existant) {
+    document.getElementById('mode')!.textContent = 'Modifier · gardée sur cet appareil';
+    const set = (k: string, val: unknown) => ((form.elements.namedItem(k) as HTMLInputElement).value = val == null ? '' : String(val));
+    set('titre', existant.titre); set('chapeau', existant.chapeau); set('portions', existant.portions);
+    set('prep', existant.prep_min); set('cuisson', existant.cuisson_min); set('note', existant.note);
+    set('etapes', existant.etapes.join('\n'));
+    for (const l of existant.ingredients) {
+      const ing = ingredients[l.ref];
+      ajouterLigne({ nom: ing?.nom ?? l.ref, qte: l.qte, unite: l.unite, ing });
+    }
+  }
+  if (!zone.children.length) for (let i = 0; i < 3; i++) ajouterLigne();
+
+  document.getElementById('ajout-ligne')!.addEventListener('click', () => $<HTMLInputElement>(ajouterLigne(), '.nom').focus());
+  zone.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('.retirer');
+    if (b) { b.closest('.ligne-ing')!.remove(); majClassement(); }
+  });
+  form.addEventListener('input', (e) => {
+    const el = (e.target as HTMLElement).closest<HTMLElement>('.ligne-ing');
+    if (el) {
+      if ((e.target as HTMLElement).classList.contains('unite')) el.dataset.uniteTouchee = '1';
+      majLigne(el);
+    }
+    majClassement();
+  });
+  majClassement();
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const err = document.getElementById('erreur')!;
+    const r = lire();
+    if (!r.titre) { err.textContent = 'Il manque le nom du plat.'; (form.elements.namedItem('titre') as HTMLElement).focus(); return; }
+    if (!r.ingredients.length) { err.textContent = 'Ajoute au moins un ingrédient.'; return; }
+    try { enregistrer(r); } catch { err.textContent = 'Impossible d’enregistrer : le stockage du navigateur est bloqué (navigation privée ?).'; return; }
+    location.href = `${B}/ma-recette/?id=${encodeURIComponent(r.id)}`;
+  });
+</script>

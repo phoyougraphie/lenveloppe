@@ -1,0 +1,132 @@
+{
+  "numero": 14,
+  "slug": "fajitas-aux-pois-chiches",
+  "titre": "Fajitas aux pois chiches rôtis",
+  "chapeau": "Des pois chiches croustillants au paprika dans une galette : chacun garnit la sienne à table.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 25,
+  "ingredients": [
+    {
+      "ref": "pois-chiche-conserve",
+      "qte": 480,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "tomate",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "vinaigre",
+      "qte": 10,
+      "unite": "ml"
+    },
+    {
+      "ref": "citron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "creme-fraiche",
+      "qte": 100,
+      "unite": "g"
+    },
+    {
+      "ref": "tortilla-ble",
+      "qte": 8,
+      "unite": "piece"
+    },
+    {
+      "ref": "coriandre-fraiche",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Préchauffe le four à 200 °C.",
+    "Égoutte et sèche les pois chiches. Mélange-les avec l'huile, le paprika et le cumin sur une plaque.",
+    "Enfourne 20 à 25 min, en secouant à mi-cuisson.",
+    "Coupe les tomates en dés et l'oignon en fines lamelles. Mélange-les avec le vinaigre et une pincée de sel.",
+    "Fais revenir le poivron en lanières 5 min à la poêle.",
+    "Mélange la crème avec le jus du citron et un peu de piment.",
+    "Réchauffe les galettes à la poêle sèche, 30 s de chaque côté.",
+    "Pose tout sur la table et laisse chacun garnir sa galette."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "creme-fraiche",
+          "par": {
+            "ref": "creme-soja",
+            "qte": 100,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Sans gluten, en bol",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "tortilla-ble",
+          "par": {
+            "ref": "riz-blanc",
+            "qte": 240,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Pour un foyer mixte, prévois la crème et la crème de soja dans deux bols : le reste est commun.",
+  "source": {
+    "type": "themealdb",
+    "id": "52870",
+    "url": "https://www.themealdb.com/meal/52870"
+  },
+  "statut": "non-testee"
+}

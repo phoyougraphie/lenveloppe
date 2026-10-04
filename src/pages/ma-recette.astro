@@ -1,0 +1,109 @@
+---
+import { B } from '../lib/lien';
+import Base from '../layouts/Base.astro';
+import Curseur from '../components/Curseur.astro';
+---
+<Base titre="Ma recette">
+  <div class="fiche" id="fiche" hidden>
+    <div>
+      <div class="outils">
+        <Curseur />
+        <span id="actions" style="display:contents"></span>
+      </div>
+      <div id="ticket"></div>
+    </div>
+    <div class="fiche-texte">
+      <p class="annotation" id="note" hidden style="margin:0 0 2rem"></p>
+      <p class="etiquette">Préparation</p>
+      <ol class="etapes" id="etapes"></ol>
+      <p class="mono" id="message" role="status" style="margin-top:1.5rem"></p>
+      <p style="margin-top:2rem"><a class="bouton creux" href={`${B}/idees/`}>← Toutes les idées</a></p>
+    </div>
+  </div>
+  <div id="absente" hidden class="prose" style="padding:3rem 0">
+    <p class="etiquette">Ma recette</p>
+    <h1 class="titre-l">Recette introuvable sur cet appareil</h1>
+    <p>Tes recettes sont gardées dans ce navigateur. Sur un autre téléphone ou après avoir effacé les données du site, elles n’y sont plus : utilise « Partager » pour les transférer.</p>
+    <p><a class="bouton" href={`${B}/ajouter/`}>Ajouter une recette</a></p>
+  </div>
+</Base>
+
+<style>
+  .fiche { display: grid; gap: 2.5rem; padding: 2rem 0; }
+  .outils { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.4rem; align-items: center; }
+  @media (min-width: 960px) {
+    .fiche { grid-template-columns: minmax(0, 34rem) minmax(0, 1fr); gap: 4.5rem; padding-top: 3rem; }
+    .fiche-texte { padding-top: 4.5rem; }
+  }
+</style>
+
+<script>
+  import { B } from '../lib/lien';
+  import { charger, obtenir, enregistrer, supprimer, lienPartage, lireLienPartage, type RecettePerso } from '../lib/mes-recettes';
+  import { enregistrerIngredients } from '../lib/calcul';
+  import { ticketHtml, esc } from '../lib/rendu';
+
+  charger();
+  const partagee = lireLienPartage(location.hash);
+  const id = new URLSearchParams(location.search).get('id');
+  const r: RecettePerso | null = partagee ?? (id ? obtenir(id) : null);
+  const message = document.getElementById('message')!;
+  const dire = (t: string) => (message.textContent = t);
+
+  if (!r) {
+    document.getElementById('absente')!.hidden = false;
+  } else {
+    if (partagee) enregistrerIngredients(partagee.ingredients_perso); // pour le calcul, sans rien stocker
+    document.title = `${r.titre} — L’enveloppe`;
+    document.getElementById('fiche')!.hidden = false;
+    document.getElementById('ticket')!.innerHTML = ticketHtml(r, partagee ? 'Reçue par lien' : undefined);
+    document.getElementById('etapes')!.innerHTML = r.etapes.map((e) => `<li>${esc(e)}</li>`).join('') || '<li>Pas d’étapes notées.</li>';
+    if (r.note) { const n = document.getElementById('note')!; n.hidden = false; n.textContent = r.note; }
+
+    const actions = document.getElementById('actions')!;
+    const bouton = (txt: string, cls: string, fn: () => void) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = `bouton ${cls}`; b.textContent = txt; b.addEventListener('click', fn);
+      actions.appendChild(b); return b;
+    };
+
+    if (partagee) {
+      dire('Recette reçue par lien. Elle n’est pas encore dans ton carnet.');
+      bouton('Ajouter à mes recettes', '', () => {
+        try { enregistrer(partagee); } catch { dire('Impossible d’enregistrer : stockage du navigateur bloqué.'); return; }
+        location.replace(`${B}/ma-recette/?id=${encodeURIComponent(partagee.id)}`);
+      });
+    } else {
+      const cle = `perso:${r.id}`;
+      const lireSemaine = (): string[] => { try { return JSON.parse(localStorage.getItem('semaine') ?? '[]'); } catch { return []; } };
+      const bSemaine = bouton('', '', () => {
+        let s = lireSemaine();
+        s = s.includes(cle) ? s.filter((x) => x !== cle) : [...s, cle].slice(0, 5);
+        try { localStorage.setItem('semaine', JSON.stringify(s)); } catch {}
+        maj();
+      });
+      const maj = () => {
+        const s = lireSemaine(); const dedans = s.includes(cle);
+        bSemaine.textContent = dedans ? 'Dans ma semaine ✓' : s.length >= 5 ? 'Semaine pleine (5)' : 'Ajouter à ma semaine';
+        bSemaine.disabled = !dedans && s.length >= 5;
+      };
+      maj();
+      const a = document.createElement('a');
+      a.className = 'bouton creux'; a.textContent = 'Modifier'; a.href = `${B}/ajouter/?id=${encodeURIComponent(r.id)}`;
+      actions.appendChild(a);
+      bouton('Partager', 'creux', async () => {
+        const url = lienPartage(r);
+        try {
+          if (navigator.share) { await navigator.share({ title: r.titre, text: `Ma recette : ${r.titre}`, url }); return; }
+          await navigator.clipboard.writeText(url);
+          dire('Lien copié. La personne qui l’ouvre pourra ajouter la recette à son carnet.');
+        } catch (e) { if ((e as Error).name !== 'AbortError') dire(`Copie impossible, voici le lien : ${url}`); }
+      });
+      bouton('Supprimer', 'creux', () => {
+        if (!confirm(`Supprimer « ${r.titre} » de cet appareil ?`)) return;
+        supprimer(r.id);
+        location.href = `${B}/idees/`;
+      });
+    }
+  }
+</script>

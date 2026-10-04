@@ -1,0 +1,96 @@
+{
+  "numero": 10,
+  "slug": "soupe-au-pistou",
+  "titre": "Soupe au pistou",
+  "chapeau": "Une soupe de légumes et de haricots, relevée d'un pistou mixé minute.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "poireau",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "courgette",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "haricot-blanc-conserve",
+      "qte": 480,
+      "unite": "g"
+    },
+    {
+      "ref": "haricot-vert-surgele",
+      "qte": 200,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "basilic",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "parmesan",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais revenir les poireaux émincés et la courgette en dés 5 min dans l'huile.",
+    "Ajoute 1 litre d'eau et le cube de bouillon.",
+    "Ajoute les trois quarts des haricots blancs, les haricots verts et la moitié des tomates en dés. Laisse frémir 8 min.",
+    "Mixe le reste des haricots et des tomates avec l'ail et le basilic, puis mélange avec le parmesan râpé.",
+    "Verse ce pistou dans la soupe, laisse chauffer 1 min et sers."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [],
+      "ajoute": [],
+      "retire": [
+        "parmesan"
+      ]
+    }
+  ],
+  "note": "Se garde 2 jours au frigo. Le pistou perd sa couleur en réchauffant : ce n'est que visuel.",
+  "source": {
+    "type": "themealdb",
+    "id": "52911",
+    "url": "https://www.themealdb.com/meal/52911"
+  },
+  "statut": "non-testee"
+}

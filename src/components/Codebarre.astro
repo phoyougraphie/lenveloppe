@@ -1,0 +1,16 @@
+---
+// Code-barres décoratif dérivé du numéro de la recette (identifiant visuel, pas un vrai EAN).
+interface Props { n: number }
+const { n } = Astro.props;
+const motif = String(n).padStart(4, '0').split('').flatMap((c) => {
+  const d = Number(c);
+  return [1 + (d % 3), 1, 1 + ((d * 7) % 4), 2, 1 + ((d + 1) % 2), 1];
+});
+const barres = [1, 1, 1, 1, ...motif, 1, 1, 1];
+let x = 0;
+const rects: { x: number; w: number }[] = [];
+barres.forEach((w, i) => { if (i % 2 === 0) rects.push({ x, w }); x += w; });
+---
+<svg class="codebarre" viewBox={`0 0 ${x} 20`} preserveAspectRatio="none" aria-hidden="true">
+  {rects.map((r) => <rect x={r.x} y="0" width={r.w} height="20" fill="currentColor" />)}
+</svg>

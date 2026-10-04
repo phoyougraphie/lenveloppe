@@ -1,0 +1,107 @@
+{
+  "numero": 1,
+  "slug": "dal-de-lentilles-corail",
+  "titre": "Dal de lentilles corail",
+  "chapeau": "Le plat qui tient au corps pour quelques euros, prêt en une demi-heure.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 25,
+  "ingredients": [
+    {
+      "ref": "lentille-corail",
+      "qte": 320,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "beurre",
+      "qte": 30,
+      "unite": "g"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "coriandre-fraiche",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "curcuma",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "curry-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "gingembre-moulu",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Rince les lentilles à l'eau froide jusqu'à ce que l'eau soit claire.",
+    "Mets-les dans une casserole avec 900 ml d'eau et le curcuma.",
+    "Laisse frémir 20 min en remuant de temps en temps : ça doit finir en soupe épaisse.",
+    "Pendant ce temps, fais cuire le riz.",
+    "Dans une poêle, fais fondre le beurre et fais dorer l'oignon émincé 5 min.",
+    "Ajoute l'ail haché, le cumin, le curry et le gingembre. Remue 1 min.",
+    "Verse les tomates et laisse compoter 5 min.",
+    "Verse le tout sur les lentilles, sale et mélange.",
+    "Parsème de coriandre et sers avec le riz."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "beurre",
+          "par": {
+            "ref": "huile-tournesol",
+            "qte": 30,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Se garde 3 jours au frigo. Le dal épaissit : détends-le avec un peu d'eau en réchauffant.",
+  "source": {
+    "type": "themealdb",
+    "id": "52785",
+    "url": "https://www.themealdb.com/meal/52785"
+  },
+  "statut": "non-testee"
+}

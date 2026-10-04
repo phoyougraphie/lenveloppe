@@ -1,0 +1,102 @@
+{
+  "numero": 33,
+  "slug": "pois-chiches-chorizo-epinards",
+  "titre": "Pois chiches au chorizo et aux épinards",
+  "chapeau": "Un ragoût espagnol tout en placard : conserves, surgelés et un bout de chorizo pour le goût.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 20,
+  "ingredients": [
+    {
+      "ref": "huile-olive",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "chorizo",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "pois-chiche-conserve",
+      "qte": 720,
+      "unite": "g"
+    },
+    {
+      "ref": "vinaigre",
+      "qte": 20,
+      "unite": "ml"
+    },
+    {
+      "ref": "epinard-surgele",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "thym",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "laurier",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "cannelle",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais fondre l'oignon haché 4 min dans l'huile.",
+    "Ajoute la carotte en dés, le thym et le laurier. Laisse 3 min.",
+    "Ajoute l'ail, le chorizo en dés, la cannelle et le paprika. Fais revenir jusqu'à ce que le chorizo rende son huile.",
+    "Ajoute les pois chiches, le vinaigre et 150 ml d'eau. Laisse frémir 2 min.",
+    "Ajoute les épinards et laisse cuire jusqu'à ce qu'ils soient chauds.",
+    "Écrase quelques pois chiches pour épaissir, sale et sers."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [],
+      "ajoute": [],
+      "retire": [
+        "chorizo"
+      ]
+    }
+  ],
+  "note": "Version vegan : double le paprika, si possible fumé, pour garder le goût du chorizo.",
+  "source": {
+    "type": "themealdb",
+    "id": "53166",
+    "url": "https://www.themealdb.com/meal/53166"
+  },
+  "statut": "non-testee"
+}

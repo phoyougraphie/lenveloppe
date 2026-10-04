@@ -1,0 +1,83 @@
+{
+  "numero": 19,
+  "slug": "tofu-saute-brocoli-cacahuetes",
+  "titre": "Tofu sauté au brocoli et aux cacahuètes",
+  "chapeau": "Un sauté au wok prêt en 30 minutes, qui apporte autant de protéines qu'un plat de viande.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "huile-tournesol",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "brocoli",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "tofu-nature",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "petit-pois-surgele",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "sauce-soja",
+      "qte": 45,
+      "unite": "ml"
+    },
+    {
+      "ref": "cacahuete",
+      "qte": 50,
+      "unite": "g"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire le riz.",
+    "Coupe le brocoli en petits bouquets et le tofu en dés.",
+    "Fais sauter le brocoli 5 min à feu vif dans l'huile, avec un peu d'eau s'il accroche.",
+    "Ajoute l'ail, l'oignon émincé et le piment. Remue 1 min.",
+    "Ajoute le tofu et les petits pois. Fais sauter 3 min.",
+    "Verse la sauce soja avec une pincée de sucre, ajoute les cacahuètes concassées et mélange.",
+    "Sers sur le riz."
+  ],
+  "variantes": [],
+  "note": "Presse le tofu 10 min entre deux torchons avant de le couper : il dore mieux.",
+  "source": {
+    "type": "themealdb",
+    "id": "53240",
+    "url": "https://www.themealdb.com/meal/53240"
+  },
+  "statut": "non-testee"
+}

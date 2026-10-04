@@ -1,0 +1,113 @@
+{
+  "numero": 38,
+  "slug": "chou-poele-au-boeuf-hache",
+  "titre": "Chou poêlé au bœuf haché",
+  "chapeau": "Un demi-chou, du bœuf haché et des carottes dans une seule poêle : simple, copieux, pas cher.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 25,
+  "ingredients": [
+    {
+      "ref": "huile-olive",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "boeuf-hache",
+      "qte": 450,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 15,
+      "unite": "g"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "chou-vert",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "vinaigre",
+      "qte": 5,
+      "unite": "ml"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais dorer la viande 4 min dans l'huile, dans une grande sauteuse, en l'émiettant.",
+    "Ajoute l'oignon, les carottes et le poivron en dés, l'ail, le concentré et les épices. Laisse 5 min.",
+    "Ajoute le chou émincé et 250 ml d'eau.",
+    "Couvre et laisse cuire 15 min, jusqu'à ce que le chou soit tendre.",
+    "Ajoute le vinaigre, rectifie le sel et parsème de persil."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux lentilles",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "boeuf-hache",
+          "par": {
+            "ref": "lentille-verte",
+            "qte": 250,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Version lentilles : fais-les cuire à part 20 min avant de les ajouter avec le chou.",
+  "source": {
+    "type": "themealdb",
+    "id": "53488",
+    "url": "https://www.themealdb.com/meal/53488"
+  },
+  "statut": "non-testee"
+}

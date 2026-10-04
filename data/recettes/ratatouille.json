@@ -1,0 +1,79 @@
+{
+  "numero": 2,
+  "slug": "ratatouille",
+  "titre": "Ratatouille",
+  "chapeau": "Les légumes de l'été cuits chacun leur tour, puis réunis : la base qui dépanne toute la semaine.",
+  "portions": 4,
+  "prep_min": 25,
+  "cuisson_min": 45,
+  "ingredients": [
+    {
+      "ref": "aubergine",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "courgette",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 45,
+      "unite": "ml"
+    },
+    {
+      "ref": "herbes-provence",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Coupe l'aubergine et les courgettes en dés de 1,5 cm.",
+    "Épépine les poivrons et coupe-les en morceaux.",
+    "Concasse les tomates grossièrement.",
+    "Fais dorer l'aubergine 10 min dans une cocotte avec un filet d'huile, puis réserve-la.",
+    "Fais pareil avec les courgettes, 5 min, et réserve.",
+    "Fais revenir l'oignon émincé et les poivrons 10 min dans le reste d'huile.",
+    "Ajoute l'ail, les tomates et les herbes, puis remets tous les légumes.",
+    "Couvre et laisse mijoter 20 min à feu doux. Sale et poivre."
+  ],
+  "variantes": [],
+  "note": "Encore meilleure le lendemain. Se congèle très bien en portions.",
+  "source": {
+    "type": "themealdb",
+    "id": "52908",
+    "url": "https://www.themealdb.com/meal/52908"
+  },
+  "statut": "non-testee"
+}

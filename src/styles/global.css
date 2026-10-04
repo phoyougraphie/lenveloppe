@@ -1,0 +1,251 @@
+/* L'enveloppe — système « ticket de caisse »
+   Deux polices : JetBrains Mono (données), Archivo (titres serrés + texte courant).
+   Une seule source de couleur : les points de régime. Tout le reste est encre sur papier. */
+
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+@import '@fontsource-variable/jetbrains-mono/wght-italic.css';
+@import '@fontsource-variable/archivo/standard.css';
+
+:root {
+  --papier: #f3efe6;
+  --papier-ticket: #fbf9f4;
+  --encre: #161513;
+  --encre-douce: #45423c; /* 9:1 sur papier — jamais plus clair pour un texte */
+  --filet: #161513;
+
+  /* La seule couleur du site : information, jamais décoration */
+  --pt-vegetarien: #2e7d46;
+  --pt-vegan: #d2691e;
+  --pt-proteines: #c2362b;
+  --pt-sans-gluten: #2a5db0;
+
+  --mono: 'JetBrains Mono Variable', ui-monospace, Menlo, monospace;
+  --grot: 'Archivo Variable', 'Arial Narrow', sans-serif;
+
+  --t-mono: 15px; /* minimum brief, mobile */
+  --gouttiere: 16px;
+  --largeur-ticket: 34rem;
+
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 720px) {
+  :root { --t-mono: 15.5px; --gouttiere: 32px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--papier) var(--grain);
+  color: var(--encre);
+  font-family: var(--grot);
+  font-size: 17px;
+  line-height: 1.5;
+  font-stretch: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
+
+img { max-width: 100%; display: block; filter: grayscale(1) contrast(1.05); }
+
+.mono { font-family: var(--mono); font-size: var(--t-mono); letter-spacing: 0; }
+.caps { text-transform: uppercase; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Titres : grotesque serrée ---------- */
+.titre-xl, .titre-l, .titre-m {
+  font-family: var(--grot);
+  font-stretch: 68%;
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+.titre-xl { font-size: clamp(3rem, 11vw, 7.5rem); }
+.titre-l  { font-size: clamp(2.1rem, 7vw, 3.6rem); }
+.titre-m  { font-size: 1.6rem; line-height: 1; }
+
+/* Étiquette méta entre crochets : [ À PROPOS ] */
+.etiquette {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--encre-douce);
+}
+.etiquette::before { content: '[ '; }
+.etiquette::after  { content: ' ]'; }
+
+/* ---------- Mise en page ---------- */
+.page { max-width: 72rem; margin: 0 auto; padding: 0 var(--gouttiere); }
+
+.entete {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: .5rem 1.5rem;
+  padding: 18px 0 14px;
+  border-bottom: 1px solid var(--filet);
+}
+.logo {
+  font-family: var(--grot); font-stretch: 62%; font-weight: 900;
+  font-size: 1.9rem; line-height: 1; text-decoration: none; text-transform: uppercase; letter-spacing: -.01em;
+}
+.nav { display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; font-family: var(--mono); font-size: 14px; text-transform: uppercase; }
+.nav a { text-decoration: none; padding: 6px 0; }
+.nav a[aria-current='page'] { text-decoration: underline; text-decoration-thickness: 2px; }
+
+.pied {
+  margin-top: 5rem; padding: 18px 0 40px;
+  border-top: 1px solid var(--filet);
+  display: grid; gap: 1rem;
+  font-family: var(--mono); font-size: 13px; color: var(--encre-douce); text-transform: uppercase;
+}
+@media (min-width: 720px) { .pied { grid-template-columns: 1fr 1fr 1fr; } }
+
+/* ---------- Le ticket ---------- */
+.ticket {
+  --dent: 9px;
+  position: relative;
+  background: var(--papier-ticket) var(--grain);
+  max-width: var(--largeur-ticket);
+  padding: calc(var(--dent) + 22px) 20px calc(var(--dent) + 24px);
+  filter: drop-shadow(0 1px 0 rgba(22,21,19,.18)) drop-shadow(0 6px 14px rgba(22,21,19,.07));
+  /* bords crantés haut et bas */
+  -webkit-mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(var(--dent) * 2) 51% repeat-x,
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(var(--dent) * 2) 51% repeat-x;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(var(--dent) * 2) 51% repeat-x,
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(var(--dent) * 2) 51% repeat-x;
+}
+@media (min-width: 720px) { .ticket { padding-left: 32px; padding-right: 32px; } }
+
+.ticket-tete {
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .04em;
+}
+.ticket hr, .tirets {
+  border: 0; height: 0; margin: 14px 0;
+  border-top: 1.5px dashed var(--encre);
+}
+
+/* Ligne avec points de conduite :  CAROTTES 400 G ........ 0,54 */
+.ligne {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: .4ch;
+  font-family: var(--mono); font-size: var(--t-mono); line-height: 1.55;
+  text-transform: uppercase;
+}
+.ligne .lib { display: flex; align-items: baseline; min-width: 0; }
+.ligne .lib::after {
+  content: '';
+  flex: 1 1 auto; min-width: 2ch;
+  margin-left: .5ch;
+  border-bottom: 2px dotted var(--encre);
+  transform: translateY(-.3em);
+}
+.ligne .lib > span { overflow-wrap: anywhere; }
+.ligne .val { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* 3 niveaux : sur mobile on n'affiche que le niveau choisi au curseur,
+   sur grand écran les trois colonnes, le niveau choisi en gras. */
+.val .n { display: none; }
+.val .sep { display: none; }
+html[data-niveau='premier'] .val .n-premier,
+html[data-niveau='moyen'] .val .n-moyen,
+html[data-niveau='qualite'] .val .n-qualite,
+html:not([data-niveau]) .val .n-moyen { display: inline; }
+
+@media (min-width: 560px) {
+  .trois .val .n { display: inline-block; min-width: 8.5ch; text-align: right; }
+  .trois .val .sep { display: inline; }
+  .trois .val .n { font-weight: 400; }
+  html[data-niveau='premier'] .trois .val .n-premier,
+  html[data-niveau='moyen'] .trois .val .n-moyen,
+  html[data-niveau='qualite'] .trois .val .n-qualite,
+  html:not([data-niveau]) .trois .val .n-moyen { font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+}
+
+.ligne.total { font-weight: 800; font-size: calc(var(--t-mono) + 1px); }
+.ligne.total .lib::after { border-bottom-style: solid; border-bottom-width: 1.5px; }
+
+.petit { font-family: var(--mono); font-size: 13px; line-height: 1.5; text-transform: uppercase; color: var(--encre-douce); }
+
+/* Annotation « manuscrite » : pas de 3e police, la mono italique penchée */
+.annotation {
+  font-family: var(--mono); font-style: italic; font-size: 15px;
+  display: inline-block; transform: rotate(-1.6deg);
+  padding: 2px 6px;
+  border-bottom: 1.5px solid var(--encre);
+}
+.annotation::before { content: '→ '; font-style: normal; }
+
+/* ---------- Points de régime ---------- */
+.point {
+  display: inline-block; width: .8em; height: .8em; border-radius: 50%;
+  vertical-align: -.05em; flex: none;
+}
+.point.vegetarien { background: var(--pt-vegetarien); }
+.point.vegan { background: var(--pt-vegan); }
+.point.proteines { background: var(--pt-proteines); }
+.point.sans-gluten { background: var(--pt-sans-gluten); }
+
+.regimes { display: flex; flex-wrap: wrap; gap: .3rem 1rem; font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .03em; }
+.regimes > span { display: inline-flex; align-items: center; gap: .45em; }
+
+/* ---------- Curseur de niveau ---------- */
+.curseur {
+  display: inline-grid; grid-template-columns: repeat(3, auto);
+  border: 1.5px solid var(--encre);
+  font-family: var(--mono); font-size: 14px; text-transform: uppercase;
+}
+.curseur legend { padding: 0; }
+.curseur label { position: relative; cursor: pointer; }
+.curseur input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.curseur span { display: block; padding: 9px 14px; min-height: 44px; display: flex; align-items: center; }
+.curseur label + label span { border-left: 1.5px solid var(--encre); }
+.curseur input:checked + span { background: var(--encre); color: var(--papier-ticket); }
+.curseur input:focus-visible + span { outline: 2px solid var(--encre); outline-offset: 2px; }
+
+/* ---------- Boutons : encre, jamais de couleur ---------- */
+.bouton {
+  display: inline-flex; align-items: center; gap: .6ch; min-height: 44px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--encre); background: var(--encre); color: var(--papier-ticket);
+  font-family: var(--mono); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+  text-decoration: none; cursor: pointer;
+}
+.bouton.creux { background: transparent; color: var(--encre); }
+.bouton:hover { text-decoration: underline; }
+.bouton:active { transform: translateY(1px); }
+
+/* ---------- Code-barres ---------- */
+.codebarre { display: block; height: 42px; width: 100%; max-width: 15rem; color: var(--encre); }
+
+/* ---------- Texte courant ---------- */
+.prose { max-width: 38rem; }
+.prose p, .prose li { font-size: 17px; }
+.prose h2 { font-family: var(--grot); font-stretch: 68%; font-weight: 800; font-size: 1.9rem; line-height: 1; margin: 2.5rem 0 .8rem; }
+.prose h3 { font-family: var(--mono); font-size: 14px; text-transform: uppercase; letter-spacing: .05em; margin: 2rem 0 .5rem; }
+.prose table { border-collapse: collapse; width: 100%; font-family: var(--mono); font-size: 13px; }
+.prose th, .prose td { text-align: left; padding: 6px 8px 6px 0; border-bottom: 1px solid var(--encre); vertical-align: top; }
+.prose code { font-family: var(--mono); font-size: .9em; }
+
+.etapes { counter-reset: e; list-style: none; padding: 0; margin: 0; }
+.etapes li { counter-increment: e; display: grid; grid-template-columns: 3ch 1fr; gap: .8ch; padding: .55rem 0; border-bottom: 1px solid rgba(22,21,19,.35); }
+.etapes li::before { content: counter(e, decimal-leading-zero); font-family: var(--mono); font-size: 14px; font-weight: 700; padding-top: .15em; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .imprime { animation: imprime .55s steps(12, end) both; }
+  @keyframes imprime { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+}

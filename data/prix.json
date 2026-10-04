@@ -1,0 +1,1083 @@
+{
+ "genere_le": "2026-10-04",
+ "items": {
+  "oignon": {
+   "unite": "kg",
+   "premier": 1.15,
+   "moyen": 2.49,
+   "qualite": 3.1,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?OIGNON",
+   "observations": null
+  },
+  "ail": {
+   "unite": "kg",
+   "premier": 7.95,
+   "moyen": 11.43,
+   "qualite": 18.71,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?AIL",
+   "observations": null
+  },
+  "carotte": {
+   "unite": "kg",
+   "premier": 1.49,
+   "moyen": 2.02,
+   "qualite": 2.43,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?CAROTTE",
+   "observations": null
+  },
+  "pomme-de-terre": {
+   "unite": "kg",
+   "premier": 1.49,
+   "moyen": 2.19,
+   "qualite": 2.13,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?POMME-DE-TERRE",
+   "observations": null
+  },
+  "tomate": {
+   "unite": "kg",
+   "premier": 3.45,
+   "moyen": 4.31,
+   "qualite": 7.68,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?TOMATE",
+   "observations": null
+  },
+  "courgette": {
+   "unite": "kg",
+   "premier": 1.79,
+   "moyen": 2.77,
+   "qualite": 4.59,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?COURGETTE",
+   "observations": null
+  },
+  "aubergine": {
+   "unite": "kg",
+   "premier": 2.99,
+   "moyen": 3.95,
+   "qualite": 5.51,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?AUBERGINE",
+   "observations": null
+  },
+  "poivron": {
+   "unite": "kg",
+   "premier": 2.99,
+   "moyen": 4.39,
+   "qualite": 6.35,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?POIVRON",
+   "observations": null
+  },
+  "poireau": {
+   "unite": "kg",
+   "premier": 2.89,
+   "moyen": 3.31,
+   "qualite": 5.52,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?POIREAU",
+   "observations": null
+  },
+  "champignon-paris": {
+   "unite": "kg",
+   "premier": null,
+   "moyen": null,
+   "qualite": 12.41,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?CHAMPIGNON-DE-PARIS",
+   "observations": null
+  },
+  "chou-vert": {
+   "unite": "kg",
+   "premier": null,
+   "moyen": 2.99,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Chou vert. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : moyen, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:cabbages&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 7,
+    "moyen": 7,
+    "qualite": 4
+   },
+   "fenetre_mois": {
+    "premier": null,
+    "moyen": 24,
+    "qualite": null
+   }
+  },
+  "brocoli": {
+   "unite": "kg",
+   "premier": null,
+   "moyen": null,
+   "qualite": 7.15,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?CHOU",
+   "observations": null
+  },
+  "fenouil": {
+   "unite": "kg",
+   "premier": null,
+   "moyen": null,
+   "qualite": 6.46,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?FENOUIL",
+   "observations": null
+  },
+  "betterave-cuite": {
+   "unite": "kg",
+   "premier": null,
+   "moyen": 1.98,
+   "qualite": 3.04,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Betteraves rouges cuites. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : moyen, qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:cooked-beetroots&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 5,
+    "moyen": 5,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": null,
+    "moyen": 24,
+    "qualite": 24
+   }
+  },
+  "courge-butternut": {
+   "unite": "kg",
+   "premier": 1.82,
+   "moyen": 2.2,
+   "qualite": 2.93,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Courge butternut. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : premier, qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:butternut-squashes&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 11,
+    "moyen": 7,
+    "qualite": 14
+   },
+   "fenetre_mois": {
+    "premier": 24,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "citron": {
+   "unite": "kg",
+   "premier": null,
+   "moyen": null,
+   "qualite": 4.35,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?CITRON",
+   "observations": null
+  },
+  "persil": {
+   "unite": "piece",
+   "premier": null,
+   "moyen": null,
+   "qualite": 2.08,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?PERSIL",
+   "observations": null
+  },
+  "epinard-surgele": {
+   "unite": "kg",
+   "premier": 1.49,
+   "moyen": 2.25,
+   "qualite": 3.42,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Épinards surgelés. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:frozen-spinachs&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 21,
+    "moyen": 21,
+    "qualite": 8
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "haricot-vert-surgele": {
+   "unite": "kg",
+   "premier": 1.85,
+   "moyen": 2.45,
+   "qualite": 3.4,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Haricots verts surgelés. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:frozen-green-beans&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 23,
+    "moyen": 23,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "petit-pois-surgele": {
+   "unite": "kg",
+   "premier": 1.68,
+   "moyen": 2.82,
+   "qualite": 5.03,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Petits pois surgelés. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : premier, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:frozen-green-peas&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 10,
+    "moyen": 7,
+    "qualite": 8
+   },
+   "fenetre_mois": {
+    "premier": 24,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "tofu-nature": {
+   "unite": "kg",
+   "premier": 3.13,
+   "moyen": 5,
+   "qualite": 11.96,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Tofu nature. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:plain-tofu&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 9,
+    "moyen": 9,
+    "qualite": 33
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "oeuf": {
+   "unite": "piece",
+   "premier": 0.232,
+   "moyen": 0.27,
+   "qualite": 0.423,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?OEUF",
+   "observations": null
+  },
+  "beurre": {
+   "unite": "kg",
+   "premier": 10.39,
+   "moyen": 12.16,
+   "qualite": 14.28,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Beurre doux. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:butters&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 228,
+    "moyen": 228,
+    "qualite": 40
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "creme-fraiche": {
+   "unite": "kg",
+   "premier": 4.56,
+   "moyen": 6.86,
+   "qualite": 6.05,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Crème fraîche épaisse. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:fermented-creams&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 75,
+    "moyen": 75,
+    "qualite": 13
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "lait": {
+   "unite": "l",
+   "premier": 0.92,
+   "moyen": 0.95,
+   "qualite": 1.17,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?LAIT",
+   "observations": null
+  },
+  "emmental-rape": {
+   "unite": "kg",
+   "premier": 8.25,
+   "moyen": 9.25,
+   "qualite": 15.75,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Emmental râpé. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:grated-emmentaler&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 87,
+    "moyen": 87,
+    "qualite": 14
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "parmesan": {
+   "unite": "kg",
+   "premier": 24.5,
+   "moyen": 28.15,
+   "qualite": 36,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Parmesan (Parmigiano Reggiano). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:parmigiano-reggiano&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 33,
+    "moyen": 33,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "boeuf-hache": {
+   "unite": "kg",
+   "premier": 15,
+   "moyen": 17.52,
+   "qualite": 24.47,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = bio en GMS",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?BOEUF",
+   "observations": null
+  },
+  "cuisse-poulet": {
+   "unite": "kg",
+   "premier": 4.21,
+   "moyen": 4.74,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Cuisses de poulet. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : premier, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:chicken-thighs&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 17,
+    "moyen": 6,
+    "qualite": 0
+   },
+   "fenetre_mois": {
+    "premier": 24,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "blanc-poulet": {
+   "unite": "kg",
+   "premier": 12.5,
+   "moyen": 15.2,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Filets de poulet. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:chicken-breasts&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 17,
+    "moyen": 17,
+    "qualite": 0
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "chorizo": {
+   "unite": "kg",
+   "premier": 11.85,
+   "moyen": 16.58,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Chorizo. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:chorizo&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 62,
+    "moyen": 62,
+    "qualite": 1
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "saucisse-toulouse": {
+   "unite": "kg",
+   "premier": 7.18,
+   "moyen": 8.32,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Saucisses de Toulouse. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:toulouse-sausages&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 15,
+    "moyen": 15,
+    "qualite": 2
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "lardon": {
+   "unite": "kg",
+   "premier": 9.2,
+   "moyen": 10.73,
+   "qualite": 15.58,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Lardons. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:lardons&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 76,
+    "moyen": 76,
+    "qualite": 12
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "saumon-pave": {
+   "unite": "kg",
+   "premier": 14.99,
+   "moyen": 23.68,
+   "qualite": null,
+   "source": "RNM – FranceAgriMer",
+   "detail": "Prix au détail. 1er prix = 1er décile GMS ; moyen = prix moyen GMS ; bio = magasins bio",
+   "periode": "semaine 39 – 2026",
+   "url": "https://rnm.franceagrimer.fr/prix?SAUMON",
+   "observations": null
+  },
+  "poisson-blanc-surgele": {
+   "unite": "kg",
+   "premier": 6.41,
+   "moyen": 9.02,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Filets de poisson blanc surgelés (nature). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:frozen-fishes&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 27,
+    "moyen": 27,
+    "qualite": 3
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "lentille-corail": {
+   "unite": "kg",
+   "premier": 3.47,
+   "moyen": 4.78,
+   "qualite": 6.74,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Lentilles corail. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:red-lentils&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 15,
+    "moyen": 15,
+    "qualite": 6
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "lentille-verte": {
+   "unite": "kg",
+   "premier": 3.3,
+   "moyen": 3.36,
+   "qualite": 5.8,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Lentilles vertes. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:green-lentils&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 32,
+    "moyen": 32,
+    "qualite": 17
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "pois-casse": {
+   "unite": "kg",
+   "premier": 2.1,
+   "moyen": 2.35,
+   "qualite": 5.28,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Pois cassés. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:dried-split-peas&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 16,
+    "moyen": 16,
+    "qualite": 14
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "haricot-blanc-sec": {
+   "unite": "kg",
+   "premier": 3.44,
+   "moyen": 5.48,
+   "qualite": 7.13,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Haricots blancs secs. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:white-beans&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 29,
+    "moyen": 29,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "haricot-blanc-conserve": {
+   "unite": "kg",
+   "premier": 1.94,
+   "moyen": 2.35,
+   "qualite": 7.71,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Haricots blancs en conserve (au naturel). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:canned-white-common-beans&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 23,
+    "moyen": 23,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "haricot-rouge-conserve": {
+   "unite": "kg",
+   "premier": 2.63,
+   "moyen": 3.36,
+   "qualite": 8.41,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Haricots rouges en conserve. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:canned-red-kidney-beans&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 43,
+    "moyen": 43,
+    "qualite": 9
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "pois-chiche-conserve": {
+   "unite": "kg",
+   "premier": 2.25,
+   "moyen": 3.33,
+   "qualite": 9.28,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Pois chiches en conserve. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:canned-chickpeas&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 55,
+    "moyen": 55,
+    "qualite": 25
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "riz-blanc": {
+   "unite": "kg",
+   "premier": 2,
+   "moyen": 2.78,
+   "qualite": 4.7,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Riz blanc (long grain, non parfumé). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:rices&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 80,
+    "moyen": 80,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "pates": {
+   "unite": "kg",
+   "premier": 1.94,
+   "moyen": 2.48,
+   "qualite": 3.9,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Pâtes sèches de blé dur. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:dry-pastas&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 479,
+    "moyen": 479,
+    "qualite": 73
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "pates-sans-gluten": {
+   "unite": "kg",
+   "premier": 4.78,
+   "moyen": 4.86,
+   "qualite": 12.45,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Pâtes sèches sans gluten. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:dry-pastas&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 6
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "feuille-lasagne": {
+   "unite": "kg",
+   "premier": 2.59,
+   "moyen": 3.11,
+   "qualite": 7.24,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Feuilles de lasagne sèches. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:lasagna-sheets&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 14,
+    "moyen": 14,
+    "qualite": 5
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "semoule": {
+   "unite": "kg",
+   "premier": 2.29,
+   "moyen": 2.99,
+   "qualite": 4.51,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Semoule de blé dur (couscous). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:durum-wheat-semolinas&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 105,
+    "moyen": 105,
+    "qualite": 14
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "tortilla-ble": {
+   "unite": "kg",
+   "premier": 6.37,
+   "moyen": 8.38,
+   "qualite": 10.75,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Tortillas de blé (wraps). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:flatbreads&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 39,
+    "moyen": 39,
+    "qualite": 6
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "baguette": {
+   "unite": "kg",
+   "premier": 3.27,
+   "moyen": 4.36,
+   "qualite": 7.43,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Baguette. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:baguettes&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 40,
+    "moyen": 40,
+    "qualite": 12
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "farine-ble": {
+   "unite": "kg",
+   "premier": 0.85,
+   "moyen": 1.21,
+   "qualite": 1.98,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Farine de blé (T45 à T65). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:wheat-flours&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 46,
+    "moyen": 46,
+    "qualite": 27
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "fecule-mais": {
+   "unite": "kg",
+   "premier": 3.7,
+   "moyen": 4.22,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Fécule de maïs. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:corn-starch&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 11,
+    "moyen": 11,
+    "qualite": 4
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "tomate-concassee-conserve": {
+   "unite": "kg",
+   "premier": 2.33,
+   "moyen": 3.33,
+   "qualite": 4.92,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Tomates en conserve (pelées, concassées, pulpe). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:canned-tomatoes&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 53,
+    "moyen": 53,
+    "qualite": 29
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "concentre-tomate": {
+   "unite": "kg",
+   "premier": 4.75,
+   "moyen": 6.75,
+   "qualite": 11.8,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Concentré de tomates. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:tomato-pastes&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 41,
+    "moyen": 41,
+    "qualite": 10
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "lait-coco": {
+   "unite": "l",
+   "premier": 3.9,
+   "moyen": 4.46,
+   "qualite": 10,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Lait de coco. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : premier, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:coconut-milks-and-creams&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 9,
+    "moyen": 6,
+    "qualite": 6
+   },
+   "fenetre_mois": {
+    "premier": 24,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "mais-conserve": {
+   "unite": "kg",
+   "premier": 3.62,
+   "moyen": 4.4,
+   "qualite": 6.18,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Maïs doux en conserve. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:canned-sweet-corn&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 75,
+    "moyen": 75,
+    "qualite": 30
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "olive-noire": {
+   "unite": "kg",
+   "premier": 6.99,
+   "moyen": 10.15,
+   "qualite": 12.68,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Olives noires. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:black-olives&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 53,
+    "moyen": 53,
+    "qualite": 13
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "thon-conserve": {
+   "unite": "kg",
+   "premier": 13.32,
+   "moyen": 17.38,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Thon au naturel en conserve. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:tunas-in-brine&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 103,
+    "moyen": 103,
+    "qualite": 3
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "sardine-conserve": {
+   "unite": "kg",
+   "premier": 12.33,
+   "moyen": 14.44,
+   "qualite": null,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Sardines à la tomate en conserve. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:sardines-in-tomato-sauce&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 31,
+    "moyen": 31,
+    "qualite": 3
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": null
+   }
+  },
+  "creme-soja": {
+   "unite": "l",
+   "premier": null,
+   "moyen": null,
+   "qualite": 5.33,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Crème de soja (cuisine). Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:soy-based-creams-for-cooking&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 4,
+    "moyen": 4,
+    "qualite": 35
+   },
+   "fenetre_mois": {
+    "premier": null,
+    "moyen": null,
+    "qualite": 12
+   }
+  },
+  "boisson-soja": {
+   "unite": "l",
+   "premier": 1.33,
+   "moyen": 1.88,
+   "qualite": 1.45,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Boisson au soja nature. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:soy-based-drinks&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 20,
+    "moyen": 20,
+    "qualite": 39
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  },
+  "cacahuete": {
+   "unite": "kg",
+   "premier": 5.79,
+   "moyen": 7.75,
+   "qualite": 12.98,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Cacahuètes. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois (élargie à 24 mois pour : qualite, faute de relevés). Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2024-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:peanuts&currency=EUR&date__gte=2024-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 63,
+    "moyen": 63,
+    "qualite": 7
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 24
+   }
+  },
+  "moutarde": {
+   "unite": "kg",
+   "premier": 3.52,
+   "moyen": 6.5,
+   "qualite": 9.52,
+   "source": "Open Prices – Open Food Facts (données collaboratives)",
+   "detail": "Moutarde de Dijon. Calculé sur des relevés de prix saisis par des bénévoles en magasin, France, hors promotions, au plus 3 relevés par produit : moyen = médiane des produits non bio, premier = 1er quartile des produits non bio, qualite = médiane des produits bio. Fenêtre 12 mois. Niveau non publié sous 5 relevés (8 pour premier).",
+   "periode": "2025-10-04 – 2026-10-04",
+   "url": "https://prices.openfoodfacts.org/api/v1/prices?type=PRODUCT&product__categories_tags__contains=en:dijon-mustards&currency=EUR&date__gte=2025-10-04&duplicate_of__isnull=true&order_by=-date",
+   "observations": {
+    "premier": 110,
+    "moyen": 110,
+    "qualite": 22
+   },
+   "fenetre_mois": {
+    "premier": 12,
+    "moyen": 12,
+    "qualite": 12
+   }
+  }
+ }
+}

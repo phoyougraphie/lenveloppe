@@ -1,0 +1,172 @@
+---
+import { B } from '../lib/lien';
+import Base from '../layouts/Base.astro';
+import Curseur from '../components/Curseur.astro';
+import Montants from '../components/Montants.astro';
+import {
+  recettes, calculerTicket, regimesDe, REGIMES, LIBELLE_REGIME, NIVEAUX, numero,
+} from '../lib/donnees';
+
+const cartes = recettes.map((r) => {
+  const t = calculerTicket(r.ingredients, r.portions);
+  // Une variante peut ouvrir la recette à d'autres régimes : on la compte, en le disant.
+  const regimes = new Set(regimesDe(r.ingredients, r.portions));
+  const parVariante = new Set<string>();
+  for (const v of r.variantes ?? []) {
+    const lignes = [...r.ingredients.filter((l) => !(v.retire ?? []).includes(l.ref) && !(v.remplace ?? []).some((x) => x.de === l.ref)), ...(v.remplace ?? []).map((x) => x.par), ...(v.ajoute ?? [])];
+    for (const g of regimesDe(lignes, r.portions)) if (!regimes.has(g)) parVariante.add(g);
+  }
+  const prefixe = Object.fromEntries(NIVEAUX.map((n) => [n, t.manquants[n] ? '≥ ' : '']));
+  // Un total où plus d'un quart des lignes manque ne veut rien dire : on ne l'affiche pas.
+  const parPersonne = { ...t.parPersonne };
+  for (const n of NIVEAUX) if (t.manquants[n] > t.lignes.length / 4) parPersonne[n] = null;
+  t.parPersonne = parPersonne;
+  return { r, t, regimes: [...regimes], parVariante: [...parVariante], prefixe, minutes: r.prep_min + (r.cuisson_min ?? 0) };
+});
+---
+<Base titre="Idées" courant="/idees/">
+  <div style="padding:2.5rem 0 1rem">
+    <p class="etiquette">{recettes.length} idées<span id="nb-perso"></span></p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem">
+      <h1 class="titre-xl">Idées</h1>
+      <a class="bouton" href={`${B}/ajouter/`}>+ Ajouter ma recette</a>
+    </div>
+  </div>
+
+  <form class="filtres" id="filtres" aria-label="Filtrer les idées">
+    <fieldset>
+      <legend class="etiquette">Régime</legend>
+      <div class="choix">
+        {REGIMES.map((g) => (
+          <label class="puce"><input type="checkbox" name="regime" value={g} /><span><span class={`point ${g}`} aria-hidden="true" />{LIBELLE_REGIME[g]}</span></label>
+        ))}
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="etiquette">Origine</legend>
+      <div class="choix">
+        <label class="puce"><input type="radio" name="origine" value="" checked /><span>Toutes</span></label>
+        <label class="puce"><input type="radio" name="origine" value="perso" /><span>Mes recettes</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="etiquette">Niveau de prix</legend>
+      <Curseur />
+    </fieldset>
+    <fieldset>
+      <legend class="etiquette">Budget par personne</legend>
+      <div class="choix">
+        {[['', 'Tous'], ['1.5', '≤ 1,50 €'], ['2.5', '≤ 2,50 €'], ['4', '≤ 4 €']].map(([v, t]) => (
+          <label class="puce"><input type="radio" name="budget" value={v} checked={v === ''} /><span>{t}</span></label>
+        ))}
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="etiquette">Temps total</legend>
+      <div class="choix">
+        {[['', 'Tous'], ['20', '≤ 20 min'], ['30', '≤ 30 min'], ['45', '≤ 45 min']].map(([v, t]) => (
+          <label class="puce"><input type="radio" name="temps" value={v} checked={v === ''} /><span>{t}</span></label>
+        ))}
+      </div>
+    </fieldset>
+  </form>
+
+  <p class="petit" id="compte" aria-live="polite" style="margin:1.5rem 0 1rem"></p>
+
+  <ul class="grille" id="grille">
+    {cartes.map(({ r, t, regimes, parVariante, prefixe, minutes }) => (
+      <li class="carte"
+        data-regimes={regimes.join(' ')}
+        data-variantes={parVariante.join(' ')}
+        data-minutes={minutes}
+        data-premier={t.parPersonne.premier ?? ''}
+        data-moyen={t.parPersonne.moyen ?? ''}
+        data-qualite={t.parPersonne.qualite ?? ''}>
+        <a href={`${B}/recettes/${r.slug}/`}>
+          <span class="ticket-tete"><span>{numero(r.numero)}</span><span>{minutes} min</span></span>
+          <span class="titre-m carte-titre">{r.titre}</span>
+          <span class="carte-regimes">
+            {REGIMES.filter((g) => regimes.includes(g) || parVariante.includes(g)).map((g) => (
+              <span data-g={g}><span class={`point ${g}`} aria-hidden="true" />{LIBELLE_REGIME[g]}{parVariante.includes(g) && ' (variante)'}</span>
+            ))}
+          </span>
+          <span class="ligne"><span class="lib"><span>Par personne</span></span><Montants m={t.parPersonne} suffixe=" €" prefixe={prefixe} /></span>
+          {NIVEAUX.some((n) => t.parPersonne[n] === null) && <span class="petit">— = prix incomplet, détail sur la fiche</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p id="vide" hidden class="prose">Aucune idée ne coche tout. Enlève un filtre : on préfère te le dire que d’inventer une recette.</p>
+</Base>
+
+<style>
+  .filtres { display: grid; gap: 1.2rem 2.5rem; padding: 1.2rem 0; border-top: 1px solid var(--encre); border-bottom: 1px solid var(--encre); }
+  @media (min-width: 900px) { .filtres { grid-template-columns: auto auto; } }
+  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  legend { margin-bottom: .5rem; }
+  .choix { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .puce { position: relative; }
+  .puce input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .puce > span { display: inline-flex; align-items: center; gap: .5em; min-height: 40px; padding: 6px 12px; border: 1.5px solid var(--encre); font-family: var(--mono); font-size: 14px; text-transform: uppercase; }
+  .puce input:checked + span { background: var(--encre); color: var(--papier-ticket); }
+  .puce input:focus-visible + span { outline: 2px solid var(--encre); outline-offset: 2px; }
+  /* Rareté des points : dans la grille, un point n'apparaît que pour un régime filtré */
+  .carte-regimes .point { display: none; }
+  .grille[data-filtre~='vegetarien'] [data-g='vegetarien'] .point,
+  .grille[data-filtre~='vegan'] [data-g='vegan'] .point,
+  .grille[data-filtre~='proteines'] [data-g='proteines'] .point,
+  .grille[data-filtre~='sans-gluten'] [data-g='sans-gluten'] .point { display: inline-block; }
+
+  .grille { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); border-top: 1px solid var(--encre); }
+  .carte { border-bottom: 1px solid var(--encre); }
+  @media (min-width: 640px) { .carte { border-right: 1px solid var(--encre); } }
+  .carte a { display: grid; gap: .7rem; padding: 1rem 1rem 1.1rem; text-decoration: none; height: 100%; align-content: start; }
+  .carte a:hover .carte-titre { text-decoration: underline; text-decoration-thickness: 2px; }
+  .carte-titre { display: block; font-size: 1.75rem; }
+  .carte-regimes { display: flex; flex-wrap: wrap; gap: .2rem .9rem; font-family: var(--mono); font-size: 12.5px; text-transform: uppercase; color: var(--encre-douce); }
+  .carte-regimes > span { display: inline-flex; align-items: center; gap: .4em; }
+</style>
+
+<script>
+  import { charger } from '../lib/mes-recettes';
+  import { carteHtml } from '../lib/rendu';
+
+  // Recettes perso en tête de grille, classées et filtrées comme les autres.
+  const perso = charger().sort((a, b) => b.cree_le.localeCompare(a.cree_le));
+  document.getElementById('grille')!.insertAdjacentHTML('afterbegin', perso.map(carteHtml).join(''));
+  if (perso.length) document.getElementById('nb-perso')!.textContent = ` · dont ${perso.length} à toi`;
+
+  const form = document.getElementById('filtres') as HTMLFormElement;
+  const grille = document.getElementById('grille')!;
+  const cartes = [...grille.querySelectorAll<HTMLElement>('.carte')];
+  const compte = document.getElementById('compte')!;
+  const vide = document.getElementById('vide')!;
+
+  function appliquer() {
+    const fd = new FormData(form);
+    const regimes = fd.getAll('regime') as string[];
+    const budget = Number(fd.get('budget')) || 0;
+    const temps = Number(fd.get('temps')) || 0;
+    const origine = fd.get('origine');
+    const niveau = document.documentElement.dataset.niveau ?? 'moyen';
+    grille.dataset.filtre = regimes.join(' ');
+    let n = 0;
+    for (const c of cartes) {
+      const dispo = `${c.dataset.regimes} ${c.dataset.variantes}`.split(' ');
+      let ok = regimes.every((g) => dispo.includes(g));
+      if (temps && Number(c.dataset.minutes) > temps) ok = false;
+      if (origine === 'perso' && !c.dataset.perso) ok = false;
+      if (budget) {
+        const p = c.dataset[niveau];
+        ok = ok && !!p && Number(p) <= budget; // pas de prix sourcé = on ne promet rien
+      }
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    compte.textContent = `${n} idée${n > 1 ? 's' : ''}${budget ? ' (budget calculé au niveau choisi, recettes sans prix sourcé exclues)' : ''}`;
+    vide.hidden = n > 0;
+  }
+  form.addEventListener('change', appliquer);
+  document.addEventListener('niveau', appliquer);
+  appliquer();
+</script>

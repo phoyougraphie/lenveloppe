@@ -1,0 +1,95 @@
+{
+  "numero": 32,
+  "slug": "saumon-au-four-fenouil-tomates",
+  "titre": "Saumon au four, fenouil et tomates",
+  "chapeau": "Un plat au four où le saumon cuit sur un lit de fenouil, de tomates et de pommes de terre.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 30,
+  "ingredients": [
+    {
+      "ref": "fenouil",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "pomme-de-terre",
+      "qte": 600,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "saumon-pave",
+      "qte": 500,
+      "unite": "g"
+    },
+    {
+      "ref": "citron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "olive-noire",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Préchauffe le four à 180 °C.",
+    "Coupe le fenouil en quartiers et les pommes de terre en rondelles. Fais-les cuire 10 min à l'eau salée.",
+    "Égoutte et étale-les dans un plat avec les tomates en quartiers. Arrose d'huile.",
+    "Enfourne 10 min.",
+    "Pose le saumon sur les légumes, ajoute le zeste du citron et les olives.",
+    "Enfourne encore 12 min.",
+    "Arrose de jus de citron et parsème de persil."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux pois chiches",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "saumon-pave",
+          "par": {
+            "ref": "pois-chiche-conserve",
+            "qte": 720,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Le saumon surgelé en pavés coûte souvent moins cher que le frais et marche aussi bien ici.",
+  "source": {
+    "type": "themealdb",
+    "id": "52959",
+    "url": "https://www.themealdb.com/meal/52959"
+  },
+  "statut": "non-testee"
+}

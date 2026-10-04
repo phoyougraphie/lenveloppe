@@ -1,0 +1,100 @@
+{
+  "numero": 36,
+  "slug": "curry-de-poulet-au-lait-de-coco",
+  "titre": "Curry de poulet au lait de coco",
+  "chapeau": "Poulet, pommes de terre et haricots verts dans une sauce coco au curry, prêt en 35 minutes.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 20,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 300,
+      "unite": "g"
+    },
+    {
+      "ref": "haricot-vert-surgele",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "ail",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "lait-coco",
+      "qte": 400,
+      "unite": "ml"
+    },
+    {
+      "ref": "blanc-poulet",
+      "qte": 450,
+      "unite": "g"
+    },
+    {
+      "ref": "basilic",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "curry-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire le riz.",
+    "Fais cuire les pommes de terre en dés 5 min à l'eau bouillante, ajoute les haricots verts et laisse 3 min. Égoutte.",
+    "Fais dorer l'ail haché quelques secondes dans l'huile très chaude.",
+    "Ajoute le curry et remue 30 s, puis verse le lait de coco et porte à frémissement.",
+    "Ajoute le poulet en lanières et laisse cuire 8 min.",
+    "Ajoute les légumes, une pincée de sucre et de sel. Laisse 2 min.",
+    "Parsème de basilic et sers avec le riz."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan au tofu",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "blanc-poulet",
+          "par": {
+            "ref": "tofu-nature",
+            "qte": 400,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "La recette d'origine utilise de la pâte de curry vert thaï ; le curry en poudre est moins cher et déjà dans le placard.",
+  "source": {
+    "type": "themealdb",
+    "id": "52814",
+    "url": "https://www.themealdb.com/meal/52814"
+  },
+  "statut": "non-testee"
+}

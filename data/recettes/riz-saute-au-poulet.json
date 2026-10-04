@@ -1,0 +1,110 @@
+{
+  "numero": 35,
+  "slug": "riz-saute-au-poulet",
+  "titre": "Riz sauté au poulet",
+  "chapeau": "Le riz de la veille, un peu de poulet, des œufs et des petits pois : le plat anti-gaspi par excellence.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "blanc-poulet",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "petit-pois-surgele",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 300,
+      "unite": "g"
+    },
+    {
+      "ref": "sauce-soja",
+      "qte": 40,
+      "unite": "ml"
+    },
+    {
+      "ref": "gingembre-moulu",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "La veille, fais cuire le riz et garde-le au frigo, étalé dans un plat.",
+    "Coupe le poulet en petits dés et fais-le sauter 6 min dans la moitié de l'huile. Réserve.",
+    "Bats les œufs, fais-les cuire en omelette brouillée dans la même poêle et réserve.",
+    "Fais sauter l'oignon, l'ail, le gingembre et la carotte en dés 4 min dans le reste d'huile.",
+    "Ajoute les petits pois et le riz froid. Fais sauter 5 min à feu vif.",
+    "Remets le poulet et les œufs, arrose de sauce soja et mélange."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan au tofu",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "blanc-poulet",
+          "par": {
+            "ref": "tofu-nature",
+            "qte": 400,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": [
+        "oeuf"
+      ]
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [],
+      "ajoute": [],
+      "retire": [
+        "sauce-soja"
+      ]
+    }
+  ],
+  "note": "Le riz froid est le secret : du riz chaud colle et fait une bouillie.",
+  "source": {
+    "type": "themealdb",
+    "id": "53367",
+    "url": "https://www.themealdb.com/meal/53367"
+  },
+  "statut": "non-testee"
+}

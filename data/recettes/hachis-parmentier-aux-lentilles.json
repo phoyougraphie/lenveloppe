@@ -1,0 +1,143 @@
+{
+  "numero": 20,
+  "slug": "hachis-parmentier-aux-lentilles",
+  "titre": "Hachis parmentier aux lentilles",
+  "chapeau": "Le parmentier version lentilles et champignons, aussi réconfortant que l'original.",
+  "portions": 4,
+  "prep_min": 30,
+  "cuisson_min": 45,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 1200,
+      "unite": "g"
+    },
+    {
+      "ref": "beurre",
+      "qte": 50,
+      "unite": "g"
+    },
+    {
+      "ref": "lait",
+      "qte": 200,
+      "unite": "ml"
+    },
+    {
+      "ref": "lentille-verte",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "champignon-paris",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 30,
+      "unite": "g"
+    },
+    {
+      "ref": "sauce-soja",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "thym",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "laurier",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire les pommes de terre épluchées 20 min à l'eau salée.",
+    "Fais cuire les lentilles 20 min dans 750 ml d'eau avec le cube, le thym et le laurier.",
+    "Pendant ce temps, fais revenir les oignons, les carottes en dés et les champignons 10 min dans l'huile.",
+    "Ajoute l'ail et le concentré de tomate, remue 1 min.",
+    "Ajoute les lentilles égouttées et la sauce soja. Laisse 5 min.",
+    "Écrase les pommes de terre avec le beurre et le lait chaud.",
+    "Étale les lentilles dans un plat, couvre de purée.",
+    "Enfourne 20 min à 200 °C, jusqu'à ce que le dessus dore."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "beurre",
+          "par": {
+            "ref": "huile-olive",
+            "qte": 40,
+            "unite": "ml"
+          }
+        },
+        {
+          "de": "lait",
+          "par": {
+            "ref": "boisson-soja",
+            "qte": 200,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [],
+      "ajoute": [],
+      "retire": [
+        "sauce-soja"
+      ]
+    }
+  ],
+  "note": "Se prépare la veille et se réchauffe au four. Se congèle en parts.",
+  "source": {
+    "type": "themealdb",
+    "id": "53000",
+    "url": "https://www.themealdb.com/meal/53000"
+  },
+  "statut": "non-testee"
+}

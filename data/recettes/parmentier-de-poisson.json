@@ -1,0 +1,122 @@
+{
+  "numero": 31,
+  "slug": "parmentier-de-poisson",
+  "titre": "Parmentier de poisson",
+  "chapeau": "Du poisson blanc surgelé en sauce sous une purée gratinée : le gratin du vendredi soir.",
+  "portions": 4,
+  "prep_min": 30,
+  "cuisson_min": 30,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 1000,
+      "unite": "g"
+    },
+    {
+      "ref": "beurre",
+      "qte": 50,
+      "unite": "g"
+    },
+    {
+      "ref": "lait",
+      "qte": 600,
+      "unite": "ml"
+    },
+    {
+      "ref": "poisson-blanc-surgele",
+      "qte": 600,
+      "unite": "g"
+    },
+    {
+      "ref": "farine-ble",
+      "qte": 30,
+      "unite": "g"
+    },
+    {
+      "ref": "poireau",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "citron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "emmental-rape",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "muscade",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire les pommes de terre épluchées 20 min à l'eau salée. Écrase-les avec 20 g de beurre et un peu de lait.",
+    "Fais chauffer le reste du lait dans une sauteuse, ajoute le poisson décongelé et coupe le feu. Laisse 3 min puis sors le poisson.",
+    "Fais fondre le poireau émincé 5 min dans le reste du beurre.",
+    "Ajoute la farine, remue 1 min, puis verse le lait chaud en fouettant jusqu'à ce que ça épaississe.",
+    "Ajoute la muscade, le persil haché, le zeste et le jus du citron. Sale et poivre.",
+    "Préchauffe le four à 200 °C.",
+    "Mets le poisson en morceaux dans un plat, nappe de sauce, couvre de purée et de fromage.",
+    "Enfourne 25 min, jusqu'à ce que ça dore."
+  ],
+  "variantes": [
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "farine-ble",
+          "par": {
+            "ref": "fecule-mais",
+            "qte": 25,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Végétarienne aux œufs durs",
+      "regime": "vegetarien",
+      "remplace": [
+        {
+          "de": "poisson-blanc-surgele",
+          "par": {
+            "ref": "oeuf",
+            "qte": 6,
+            "unite": "piece"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Se monte la veille et passe au four au moment du repas.",
+  "source": {
+    "type": "themealdb",
+    "id": "52802",
+    "url": "https://www.themealdb.com/meal/52802"
+  },
+  "statut": "non-testee"
+}

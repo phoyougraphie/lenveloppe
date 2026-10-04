@@ -1,0 +1,268 @@
+---
+import { B } from '../lib/lien';
+import Base from '../layouts/Base.astro';
+import Curseur from '../components/Curseur.astro';
+import { recettes, numero } from '../lib/donnees';
+
+// Recettes du carnet, brutes : le calcul se fait dans le navigateur avec les recettes perso.
+const carnet = Object.fromEntries(recettes.map((r) => [r.slug, {
+  titre: r.titre, numero: numero(r.numero), portions: r.portions, ingredients: r.ingredients,
+}]));
+---
+<Base titre="Ma semaine" courant="/semaine/">
+  <div style="padding:2.5rem 0 1rem">
+    <p class="etiquette">Jusqu’à 5 idées</p>
+    <h1 class="titre-xl">Ma semaine</h1>
+  </div>
+  <div class="semaine">
+    <div class="colonne-gauche">
+      <p class="prose">Ajoute des idées depuis leur fiche. Tout reste dans ton navigateur : on ne voit rien.</p>
+      <ul id="choisies" class="choisies"></ul>
+      <p id="rien" class="petit">Rien pour l’instant. <a href={`${B}/idees/`}>Choisir des idées</a></p>
+
+      <section id="bloc-export" hidden class="export">
+        <p class="etiquette">Emporter la liste</p>
+        <div class="boutons">
+          <button class="bouton" type="button" id="partager">Envoyer vers Notes / Keep</button>
+          <button class="bouton creux" type="button" id="copier">Copier</button>
+          <button class="bouton creux" type="button" id="telecharger">Fichier .txt</button>
+          <button class="bouton creux" type="button" onclick="window.print()">Imprimer (80 mm)</button>
+        </div>
+        <p class="aide-export">iPhone : choisis « Notes » dans le menu de partage. Android : choisis « Keep ». Pour avoir des cases à cocher : dans Notes, sélectionne tout puis touche l’icône liste ✓ ; dans Keep, menu ⋮ puis « Afficher les cases ».</p>
+        <p class="mono" id="message" role="status" style="margin:.8rem 0 0"></p>
+      </section>
+    </div>
+
+    <div>
+      <div class="outils"><Curseur /><button class="bouton creux" type="button" id="ordre-bouton" aria-expanded="false">Ordre des rayons</button></div>
+      <article class="ticket trois" id="liste" hidden>
+        <div class="ticket-tete"><span>Liste de courses</span><span id="date"></span></div>
+        <p class="petit" style="margin:.3rem 0 0">Triée par rayon · touche une ligne pour la cocher</p>
+        <hr />
+        <div id="rayons"></div>
+        <p class="petit" id="placard" style="margin:.8rem 0 0"></p>
+        <hr />
+        <div id="totaux"></div>
+        <hr />
+        <p class="petit" style="margin:0">Prix moyens France · publics quand ils existent, collaboratifs sinon, toujours sourcés · — = non suivi · ≥ = total sans ces lignes</p>
+        <div class="sans-impression" style="margin-top:.8rem"><button type="button" class="lien" id="decocher">Tout décocher</button></div>
+      </article>
+    </div>
+  </div>
+  <script type="application/json" id="carnet" set:html={JSON.stringify(carnet)} />
+</Base>
+
+<style>
+  .semaine { display: grid; gap: 2.5rem; }
+  .colonne-gauche { order: 2; } /* sur mobile, la liste d'abord : c'est elle qu'on regarde en magasin */
+  @media (min-width: 960px) { .semaine { grid-template-columns: minmax(0, 1fr) minmax(0, 34rem); gap: 4rem; } .colonne-gauche { order: 0; } }
+  .aide-export { font-size: 15px; color: var(--encre-douce); margin: .6rem 0 0; max-width: 34rem; }
+  .outils { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.4rem; }
+  .choisies { list-style: none; padding: 0; margin: 1.5rem 0; border-top: 1px solid var(--encre); }
+  .choisies :global(li) { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--encre); }
+  .choisies :global(button), .lien { background: none; border: 0; padding: 0; font-family: var(--mono); font-size: 13px; text-transform: uppercase; text-decoration: underline; cursor: pointer; min-height: 40px; color: inherit; }
+  .export { margin-top: 2rem; }
+  .boutons { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+
+  :global(.rayon) { margin: 0 0 1rem; }
+  :global(.rayon-tete) { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin: 0 0 .25rem; }
+  :global(.rayon-nom) { font-family: var(--mono); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  :global(.rayon-fleches) { display: none; gap: .3rem; }
+  :global(#rayons.reglage .rayon-fleches) { display: flex; }
+  :global(.rayon-fleches button) { width: 44px; height: 36px; border: 1.5px solid var(--encre); background: none; font-size: 16px; cursor: pointer; color: var(--encre); }
+  :global(.rayon-fleches button:disabled) { opacity: .3; cursor: default; }
+  :global(.article) { display: grid; grid-template-columns: 1.6ch minmax(0, 1fr); gap: .6ch; align-items: baseline; cursor: pointer; padding: 3px 0; }
+  :global(.article input) { margin: 0; width: 18px; height: 18px; accent-color: var(--encre); cursor: pointer; align-self: center; }
+  :global(.article.coche .ligne) { text-decoration: line-through; text-decoration-thickness: 2px; opacity: .55; }
+
+  @media print {
+    @page { size: 80mm auto; margin: 4mm; }
+    :global(.entete), :global(.pied), .outils, .colonne-gauche, :global(h1), :global(.etiquette), .sans-impression, :global(.rayon-fleches) { display: none !important; }
+    :global(body) { background: #fff; }
+    :global(.page) { padding: 0; }
+    .semaine { display: block; }
+    :global(.ticket) { -webkit-mask: none; mask: none; filter: none; background: #fff; padding: 0; max-width: none; }
+    :global(.ligne) { font-size: 10.5px; }
+    :global(.article.coche .ligne) { opacity: 1; text-decoration: none; }
+    :global(.val .n) { display: inline !important; font-weight: 400 !important; text-decoration: none !important; min-width: 0 !important; }
+    :global(.val .sep) { display: inline !important; }
+  }
+</style>
+
+<script>
+  import { B } from '../lib/lien';
+  import {
+    calculerTicket, ingredients, libelleQuantite, rayonDe, RAYONS, NIVEAUX, LIBELLE_NIVEAU, euros,
+    type LigneRecette, type Montants, type Niveau,
+  } from '../lib/calcul';
+  import { charger } from '../lib/mes-recettes';
+  import { montantsHtml, esc } from '../lib/rendu';
+
+  type Rec = { titre: string; numero: string; portions: number; ingredients: LigneRecette[]; lien: string };
+  const carnet: Record<string, Omit<Rec, 'lien'>> = JSON.parse(document.getElementById('carnet')!.textContent!);
+  const toutes: Record<string, Rec> = {};
+  for (const [slug, r] of Object.entries(carnet)) toutes[slug] = { ...r, lien: `${B}/recettes/${slug}/` };
+  for (const r of charger()) toutes[`perso:${r.id}`] = { titre: r.titre, numero: 'Ma recette', portions: r.portions, ingredients: r.ingredients, lien: `${B}/ma-recette/?id=${encodeURIComponent(r.id)}` };
+
+  const lireJson = <T,>(cle: string, defaut: T): T => { try { return JSON.parse(localStorage.getItem(cle) ?? '') ?? defaut; } catch { return defaut; } };
+  const ecrireJson = (cle: string, v: unknown) => { try { localStorage.setItem(cle, JSON.stringify(v)); } catch {} };
+  const semaine = () => lireJson<string[]>('semaine', []).filter((s) => toutes[s]);
+  const RAYON_AUTRES = { id: 'autres', nom: 'Autres' };
+  const ordreRayons = (): string[] => {
+    const defaut = [...RAYONS.map((r) => r.id), 'autres'];
+    const o = lireJson<string[]>('ordre-rayons', []).filter((x) => defaut.includes(x));
+    return [...o, ...defaut.filter((x) => !o.includes(x))];
+  };
+  const nomRayon = (id: string) => (RAYONS.find((r) => r.id === id) ?? RAYON_AUTRES).nom;
+
+  type Article = { ref: string; nom: string; qtes: Map<string, number>; sansQte: boolean; m: Montants; rayon: string };
+  let articles: Article[] = [];
+  let total: Montants = { premier: 0, moyen: 0, qualite: 0 };
+  let manque: Record<Niveau, number> = { premier: 0, moyen: 0, qualite: 0 };
+  let placard: string[] = [];
+
+  function calculer(choix: string[]) {
+    const agg = new Map<string, Article>();
+    const pl = new Set<string>();
+    total = { premier: 0, moyen: 0, qualite: 0 };
+    manque = { premier: 0, moyen: 0, qualite: 0 };
+    for (const s of choix) {
+      for (const l of toutes[s].ingredients) {
+        const ing = ingredients[l.ref];
+        if (!ing) continue;
+        if (ing.placard) { pl.add(ing.nom.toLowerCase()); continue; }
+        const a = agg.get(l.ref) ?? { ref: l.ref, nom: ing.nom, qtes: new Map(), sansQte: false, m: { premier: 0, moyen: 0, qualite: 0 }, rayon: rayonDe(l.ref) };
+        if (l.qte === null || !l.unite) { a.sansQte = true; agg.set(l.ref, a); continue; }
+        a.qtes.set(l.unite, (a.qtes.get(l.unite) ?? 0) + l.qte);
+        const m = calculerTicket([l], toutes[s].portions).lignes[0]?.montants;
+        for (const n of NIVEAUX) {
+          const v = m?.[n] ?? null;
+          if (v === null) { a.m[n] = null; manque[n]++; }
+          else { if (a.m[n] !== null) a.m[n] = (a.m[n] as number) + v; total[n] = (total[n] as number) + v; }
+        }
+        agg.set(l.ref, a);
+      }
+    }
+    articles = [...agg.values()];
+    placard = [...pl];
+  }
+
+  const qteTexte = (a: Article) =>
+    [...a.qtes].map(([u, q]) => libelleQuantite({ ref: a.ref, qte: Math.round(q * 10) / 10, unite: u as LigneRecette['unite'] })).join(' + ');
+
+  function grouper() {
+    const ordre = ordreRayons();
+    return ordre
+      .map((id) => ({ id, items: articles.filter((a) => (ordre.includes(a.rayon) ? a.rayon : 'autres') === id).sort((x, y) => x.nom.localeCompare(y.nom, 'fr')) }))
+      .filter((g) => g.items.length);
+  }
+
+  function rendre() {
+    const choix = semaine();
+    document.getElementById('choisies')!.innerHTML = choix.map((s) =>
+      `<li><a href="${toutes[s].lien}">${esc(toutes[s].numero)} · ${esc(toutes[s].titre)}</a><button data-retire="${esc(s)}">Retirer</button></li>`).join('');
+    document.getElementById('rien')!.hidden = choix.length > 0;
+    document.getElementById('liste')!.hidden = !choix.length;
+    document.getElementById('bloc-export')!.hidden = !choix.length;
+    if (!choix.length) return;
+
+    calculer(choix);
+    const coches = new Set(lireJson<string[]>('coches', []));
+    const groupes = grouper();
+    document.getElementById('rayons')!.innerHTML = groupes.map((g, i) => `
+      <section class="rayon" data-rayon="${g.id}">
+        <div class="rayon-tete"><span class="rayon-nom">${esc(nomRayon(g.id))}</span>
+          <span class="rayon-fleches"><button type="button" data-monte="${g.id}" aria-label="Monter ${esc(nomRayon(g.id))}" ${i === 0 ? 'disabled' : ''}>↑</button><button type="button" data-descend="${g.id}" aria-label="Descendre ${esc(nomRayon(g.id))}" ${i === groupes.length - 1 ? 'disabled' : ''}>↓</button></span>
+        </div>
+        ${g.items.map((a) => `<label class="article${coches.has(a.ref) ? ' coche' : ''}"><input type="checkbox" data-coche="${esc(a.ref)}" ${coches.has(a.ref) ? 'checked' : ''} />
+          <span class="ligne"><span class="lib"><span>${esc(a.nom)} ${a.qtes.size ? qteTexte(a) : ''}</span></span>${a.qtes.size ? montantsHtml(a.m) : '<span class="val">—</span>'}</span></label>`).join('')}
+      </section>`).join('');
+    document.getElementById('placard')!.textContent = placard.length ? `À vérifier au placard : ${placard.join(', ')}` : '';
+    const pre = Object.fromEntries(NIVEAUX.map((n) => [n, manque[n] ? '≥ ' : '']));
+    document.getElementById('totaux')!.innerHTML =
+      `<div class="ligne total"><span class="lib"><span>Total ${choix.length} repas</span></span>${montantsHtml(total, ' €', pre)}</div>`;
+    document.getElementById('date')!.textContent = new Date().toLocaleDateString('fr-FR');
+  }
+
+  /** Texte brut pour Notes / Keep : un rayon en majuscules, une ligne « - » par article. */
+  function texteListe() {
+    const niveau = (document.documentElement.dataset.niveau ?? 'moyen') as Niveau;
+    const choix = semaine();
+    const lignes = [`Courses du ${new Date().toLocaleDateString('fr-FR')}`, `Repas : ${choix.map((s) => toutes[s].titre).join(', ')}`, ''];
+    for (const g of grouper()) {
+      lignes.push(nomRayon(g.id).toUpperCase());
+      for (const a of g.items) lignes.push(`- ${a.nom}${a.qtes.size ? ` ${qteTexte(a).toLowerCase()}` : ''}`);
+      lignes.push('');
+    }
+    if (placard.length) lignes.push(`Au placard, à vérifier : ${placard.join(', ')}`, '');
+    const t = total[niveau];
+    if (t !== null) lignes.push(`Estimation ${LIBELLE_NIVEAU[niveau].toLowerCase()} : ${manque[niveau] ? 'au moins ' : ''}${euros(t)} € (prix moyens France)`);
+    lignes.push('L’enveloppe');
+    return lignes.join('\n');
+  }
+
+  const dire = (t: string) => (document.getElementById('message')!.textContent = t);
+
+  document.getElementById('partager')!.addEventListener('click', async () => {
+    const text = texteListe();
+    if (navigator.share) {
+      try { await navigator.share({ title: 'Liste de courses', text }); dire(''); }
+      catch (e) { if ((e as Error).name !== 'AbortError') dire('Partage impossible ici. Utilise « Copier » puis colle dans ta note.'); }
+    } else {
+      try { await navigator.clipboard.writeText(text); dire('Cet appareil n’a pas de menu de partage : liste copiée, colle-la dans une note.'); }
+      catch { dire('Partage impossible. Utilise « Fichier .txt ».'); }
+    }
+  });
+  document.getElementById('copier')!.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(texteListe()); dire('Liste copiée.'); }
+    catch { dire('Copie bloquée par le navigateur. Utilise « Fichier .txt ».'); }
+  });
+  document.getElementById('telecharger')!.addEventListener('click', () => {
+    const url = URL.createObjectURL(new Blob([texteListe()], { type: 'text/plain;charset=utf-8' }));
+    const a = document.createElement('a');
+    a.href = url; a.download = `courses-${new Date().toISOString().slice(0, 10)}.txt`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  const bOrdre = document.getElementById('ordre-bouton')!;
+  bOrdre.addEventListener('click', () => {
+    const z = document.getElementById('rayons')!;
+    const actif = z.classList.toggle('reglage');
+    bOrdre.setAttribute('aria-expanded', String(actif));
+    bOrdre.textContent = actif ? 'Terminé' : 'Ordre des rayons';
+  });
+
+  document.addEventListener('click', (e) => {
+    const el = e.target as HTMLElement;
+    const retire = el.closest<HTMLElement>('[data-retire]');
+    if (retire) { ecrireJson('semaine', semaine().filter((s) => s !== retire.dataset.retire)); rendre(); return; }
+    const monte = el.closest<HTMLElement>('[data-monte]')?.dataset.monte;
+    const descend = el.closest<HTMLElement>('[data-descend]')?.dataset.descend;
+    if (monte || descend) {
+      // On déplace par rapport aux rayons visibles, pour que chaque clic ait un effet.
+      const visibles = grouper().map((g) => g.id);
+      const id = (monte ?? descend)!;
+      const i = visibles.indexOf(id);
+      const voisin = visibles[monte ? i - 1 : i + 1];
+      if (!voisin) return;
+      // On déplace le rayon juste avant (ou après) son voisin, sans bousculer les autres.
+      const ordre = ordreRayons().filter((x) => x !== id);
+      const b = ordre.indexOf(voisin);
+      ordre.splice(monte ? b : b + 1, 0, id);
+      ecrireJson('ordre-rayons', ordre);
+      rendre();
+      document.querySelector<HTMLElement>(`[data-${monte ? 'monte' : 'descend'}="${id}"]:not(:disabled)`)?.focus();
+    }
+  });
+  document.addEventListener('change', (e) => {
+    const c = (e.target as HTMLInputElement).dataset?.coche;
+    if (!c) return;
+    const s = new Set(lireJson<string[]>('coches', []));
+    (e.target as HTMLInputElement).checked ? s.add(c) : s.delete(c);
+    ecrireJson('coches', [...s]);
+    (e.target as HTMLElement).closest('.article')!.classList.toggle('coche', (e.target as HTMLInputElement).checked);
+  });
+  document.getElementById('decocher')!.addEventListener('click', () => { ecrireJson('coches', []); rendre(); });
+  rendre();
+</script>

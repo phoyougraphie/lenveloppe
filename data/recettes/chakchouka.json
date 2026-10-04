@@ -1,0 +1,104 @@
+{
+  "numero": 3,
+  "slug": "chakchouka",
+  "titre": "Chakchouka",
+  "chapeau": "Des œufs pochés dans une sauce tomate-poivron épicée : un dîner en 30 minutes avec ce qu'il y a dans le placard.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 25,
+  "ingredients": [
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 800,
+      "unite": "g"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 6,
+      "unite": "piece"
+    },
+    {
+      "ref": "coriandre-fraiche",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais revenir les oignons et le poivron émincés 5 min dans l'huile, dans une grande poêle avec couvercle.",
+    "Ajoute l'ail, le cumin, le paprika et un peu de piment. Remue 1 min.",
+    "Verse les tomates avec une pincée de sucre et laisse épaissir 10 min.",
+    "Creuse 6 petits trous dans la sauce et casse un œuf dans chacun.",
+    "Couvre et laisse cuire 6 à 8 min à feu doux, jusqu'à ce que les blancs soient pris.",
+    "Parsème de coriandre et sers aussitôt."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan au tofu",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "oeuf",
+          "par": {
+            "ref": "tofu-nature",
+            "qte": 300,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "La sauce sans les œufs se congèle un mois. Pour la version tofu, émiette-le dans la sauce et laisse chauffer 5 min.",
+  "source": {
+    "type": "themealdb",
+    "id": "52963",
+    "url": "https://www.themealdb.com/meal/52963"
+  },
+  "statut": "non-testee"
+}

@@ -1,0 +1,15 @@
+---
+// Régimes en texte, avec au plus 2 points de couleur (règle du brief).
+import { LIBELLE_REGIME, pointsVisibles, type Regime } from '../lib/donnees';
+interface Props { regimes: Regime[]; points?: boolean }
+const { regimes, points = true } = Astro.props;
+const avecPoint = points ? pointsVisibles(regimes) : [];
+const affiches = regimes.includes('vegan') ? regimes.filter((r) => r !== 'vegetarien') : regimes;
+---
+{affiches.length > 0 && (
+  <p class="regimes">
+    {affiches.map((r) => (
+      <span>{avecPoint.includes(r) && <span class={`point ${r}`} aria-hidden="true" />}{r === 'vegan' ? 'Vegan (donc végétarien)' : LIBELLE_REGIME[r]}</span>
+    ))}
+  </p>
+)}

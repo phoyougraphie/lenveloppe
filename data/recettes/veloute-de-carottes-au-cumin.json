@@ -1,0 +1,67 @@
+{
+  "numero": 12,
+  "slug": "veloute-de-carottes-au-cumin",
+  "titre": "Velouté de carottes au cumin",
+  "chapeau": "Des carottes rôties au four puis mixées : un velouté doux et parfumé pour presque rien.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 35,
+  "ingredients": [
+    {
+      "ref": "carotte",
+      "qte": 800,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "citron",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "coriandre-moulue",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Préchauffe le four à 200 °C.",
+    "Coupe les carottes en rondelles et l'oignon en lamelles.",
+    "Mélange-les sur une plaque avec l'ail, le cumin, la coriandre, l'huile et une pincée de sel.",
+    "Enfourne 25 min, jusqu'à ce que les carottes soient tendres.",
+    "Mixe avec 1 litre d'eau chaude.",
+    "Réchauffe 5 min, ajoute le jus du demi-citron et rectifie le sel."
+  ],
+  "variantes": [],
+  "note": "Pour un repas complet, ajoute 100 g de lentilles corail à la cuisson : elles se fondent dans le velouté.",
+  "source": {
+    "type": "themealdb",
+    "id": "53047",
+    "url": "https://www.themealdb.com/meal/53047"
+  },
+  "statut": "non-testee"
+}

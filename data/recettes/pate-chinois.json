@@ -1,0 +1,112 @@
+{
+  "numero": 26,
+  "slug": "pate-chinois",
+  "titre": "Pâté chinois (hachis parmentier au maïs)",
+  "chapeau": "Le hachis parmentier québécois : bœuf, maïs, purée, en trois couches.",
+  "portions": 4,
+  "prep_min": 25,
+  "cuisson_min": 45,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 1000,
+      "unite": "g"
+    },
+    {
+      "ref": "beurre",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "lait",
+      "qte": 150,
+      "unite": "ml"
+    },
+    {
+      "ref": "boeuf-hache",
+      "qte": 450,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "mais-conserve",
+      "qte": 280,
+      "unite": "g"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire les pommes de terre épluchées 20 min à l'eau salée.",
+    "Écrase-les avec la moitié du beurre et le lait chaud. Sale et poivre.",
+    "Préchauffe le four à 190 °C.",
+    "Fais dorer l'oignon haché dans le reste du beurre, puis ajoute la viande et fais-la dorer en émiettant.",
+    "Mixe grossièrement la moitié du maïs.",
+    "Dans un plat, étale la viande, puis tout le maïs, puis la purée.",
+    "Saupoudre de paprika et enfourne 25 min.",
+    "Parsème de persil."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux lentilles",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "boeuf-hache",
+          "par": {
+            "ref": "lentille-verte",
+            "qte": 200,
+            "unite": "g"
+          }
+        },
+        {
+          "de": "beurre",
+          "par": {
+            "ref": "huile-olive",
+            "qte": 40,
+            "unite": "ml"
+          }
+        },
+        {
+          "de": "lait",
+          "par": {
+            "ref": "boisson-soja",
+            "qte": 150,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Le maïs à moitié mixé remplace la crème de maïs de la recette d'origine, introuvable en France. Version vegan : fais cuire les lentilles 20 min à l'eau avant de les poêler.",
+  "source": {
+    "type": "themealdb",
+    "id": "52930",
+    "url": "https://www.themealdb.com/meal/52930"
+  },
+  "statut": "non-testee"
+}

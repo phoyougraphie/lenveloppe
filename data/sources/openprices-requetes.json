@@ -1,0 +1,1381 @@
+{
+  "_doc": "Requêtes Open Prices par ingrédient (lu par scripts/openprices.mjs). requetes[].categorie = tag de catégorie Open Food Facts ; mode 'produit' = relevés de produits à code-barres dont les catégories OFF contiennent ce tag (filtre API product__categories_tags__contains) ; mode 'vrac' = relevés sans code-barres saisis par catégorie (filtre API category_tag). exiger = tags OFF tous obligatoires sur le produit ; exclure = tags OFF qui écartent le produit (plats préparés, boissons, variantes hors sujet). unite = kg ou l (unité du prix calculé). densite = kg par litre, utilisée seulement si un produit liquide est déclaré en grammes (ou l'inverse). exiger_label_un_de = le produit doit porter au moins un de ces labels OFF. Le prix est toujours exprimé au poids net (ou volume) indiqué sur l'emballage : pour les conserves, c'est le poids net total, pas le poids égoutté. Pour les ingrédients comptés à la pièce dans les recettes (botte d'herbes, chou, tortilla, baguette), on publie un €/kg : le site convertit avec poids_piece_g. exclure_nom = expression régulière (insensible à la casse) sur le nom du produit, pour écarter ce que les catégories OFF ne distinguent pas. exiger_nom = expression régulière que le nom du produit doit contenir.",
+  "lentille-corail": {
+    "nom": "Lentilles corail",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:red-lentils",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:red-lentils",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:canned-foods",
+      "en:meals",
+      "en:prepared-lentils",
+      "en:flours",
+      "en:snacks",
+      "en:pastas"
+    ]
+  },
+  "lentille-verte": {
+    "nom": "Lentilles vertes",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:green-lentils",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:green-lentils",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:canned-foods",
+      "en:meals",
+      "en:prepared-lentils",
+      "en:cooked-vegetables",
+      "en:frozen-foods",
+      "en:flours",
+      "en:salads"
+    ]
+  },
+  "lentille-conserve": {
+    "nom": "Lentilles en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-lentils",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-meals",
+      "en:soups"
+    ]
+  },
+  "pois-chiche-sec": {
+    "nom": "Pois chiches secs",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:chickpeas",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:chickpeas",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:canned-foods",
+      "en:canned-chickpeas",
+      "en:meals",
+      "en:prepared-vegetables",
+      "en:cooked-vegetables",
+      "en:spreads",
+      "en:dips",
+      "en:snacks",
+      "en:flours",
+      "en:frozen-foods",
+      "en:salted-snacks",
+      "en:appetizers"
+    ]
+  },
+  "pois-chiche-conserve": {
+    "nom": "Pois chiches en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-chickpeas",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-meals",
+      "en:spreads",
+      "en:dips",
+      "en:soups"
+    ]
+  },
+  "riz-blanc": {
+    "nom": "Riz blanc (long grain, non parfumé)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:rices",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:rices",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:aromatic-rices",
+      "en:basmati-rices",
+      "en:jasmine-rice",
+      "en:brown-rices",
+      "en:semi-milled-rices",
+      "en:rices-for-risotto",
+      "en:wild-rices",
+      "en:red-rices",
+      "en:black-rices",
+      "en:glutinous-rices",
+      "en:rices-for-desserts",
+      "en:meals",
+      "en:rice-dishes",
+      "en:frozen-foods",
+      "en:beverages",
+      "en:dairy-substitutes",
+      "en:flours",
+      "en:snacks",
+      "en:canned-foods",
+      "en:breakfast-cereals",
+      "en:desserts",
+      "en:puffed-cereal-cakes",
+      "en:rice-cakes",
+      "en:mixes-of-cereal-grains",
+      "en:precooked-rices",
+      "en:microwave-rices",
+      "en:cooked-rices",
+      "en:rice-noodles",
+      "en:sushi-rices"
+    ]
+  },
+  "riz-basmati": {
+    "nom": "Riz basmati",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:basmati-rices",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:basmati-rices",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:brown-rices",
+      "en:semi-milled-rices",
+      "en:meals",
+      "en:rice-dishes",
+      "en:frozen-foods",
+      "en:precooked-rices",
+      "en:microwave-rices",
+      "en:cooked-rices",
+      "en:mixes-of-cereal-grains"
+    ]
+  },
+  "riz-complet": {
+    "nom": "Riz complet",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:brown-rices",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:brown-rices",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:rice-dishes",
+      "en:frozen-foods",
+      "en:precooked-rices",
+      "en:microwave-rices",
+      "en:cooked-rices",
+      "en:snacks",
+      "en:puffed-cereal-cakes",
+      "en:rice-cakes",
+      "en:mixes-of-cereal-grains",
+      "en:beverages"
+    ]
+  },
+  "pates": {
+    "nom": "Pâtes sèches de blé dur",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:dry-pastas",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:dry-pastas",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:egg-pastas",
+      "en:dry-egg-pastas",
+      "en:fresh-pastas",
+      "en:stuffed-pastas",
+      "en:gluten-free-pastas",
+      "en:meals",
+      "en:instant-noodles",
+      "en:noodles",
+      "en:legume-pastas",
+      "en:soups",
+      "en:frozen-foods",
+      "en:lasagna-sheets"
+    ]
+  },
+  "semoule": {
+    "nom": "Semoule de blé dur (couscous)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:durum-wheat-semolinas",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:durum-wheat-semolinas",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:couscous-dishes",
+      "en:prepared-salads",
+      "en:salads",
+      "en:tabbouleh",
+      "en:desserts",
+      "en:frozen-foods",
+      "en:pastas"
+    ]
+  },
+  "boulgour": {
+    "nom": "Boulgour",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:bulgur",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:bulgur",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:prepared-salads",
+      "en:salads",
+      "en:frozen-foods",
+      "en:precooked-cereals",
+      "en:mixes-of-cereal-grains"
+    ]
+  },
+  "quinoa": {
+    "nom": "Quinoa",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:quinoa",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:quinoa",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:prepared-salads",
+      "en:salads",
+      "en:frozen-foods",
+      "en:flakes",
+      "en:puffed-cereals",
+      "en:snacks",
+      "en:flours",
+      "en:mixes-of-cereal-grains",
+      "en:precooked-cereals",
+      "en:breakfast-cereals"
+    ]
+  },
+  "flocon-avoine": {
+    "nom": "Flocons d'avoine",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:rolled-oats",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:rolled-oats",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:mueslis",
+      "en:granolas",
+      "en:porridges",
+      "en:biscuits",
+      "en:snacks",
+      "en:cereal-bars",
+      "en:chocolate-cereals"
+    ]
+  },
+  "farine-ble": {
+    "nom": "Farine de blé (T45 à T65)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:wheat-flours",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:wheat-flours",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:wheat-flour-t110",
+      "en:wheat-flour-t150",
+      "en:whole-wheat-flours",
+      "en:wholemeal-flours",
+      "en:spelt-flours",
+      "en:bread-mixes",
+      "en:cake-mixes",
+      "en:pastry-helpers",
+      "en:gluten-free-flours",
+      "en:mixes-for-bread"
+    ]
+  },
+  "fecule-mais": {
+    "nom": "Fécule de maïs",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:corn-starch",
+        "mode": "produit"
+      }
+    ]
+  },
+  "tomate-concassee-conserve": {
+    "nom": "Tomates en conserve (pelées, concassées, pulpe)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-tomatoes",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:tomato-pastes",
+      "en:double-concentrate-tomato-paste",
+      "en:sauces",
+      "en:tomato-sauces",
+      "en:cooking-sauces",
+      "en:condiments",
+      "en:frozen-foods",
+      "en:sun-dried-tomatoes",
+      "en:dried-tomatoes",
+      "en:meals",
+      "en:soups",
+      "en:ketchup"
+    ]
+  },
+  "coulis-tomate": {
+    "nom": "Coulis / purée de tomates",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:tomato-purees",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:tomato-pastes",
+      "en:double-concentrate-tomato-paste",
+      "en:cooking-sauces",
+      "en:meals",
+      "en:soups",
+      "en:ketchup"
+    ]
+  },
+  "concentre-tomate": {
+    "nom": "Concentré de tomates",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:tomato-pastes",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:cooking-sauces",
+      "en:meals",
+      "en:ketchup",
+      "en:sun-dried-tomatoes",
+      "en:pestos"
+    ]
+  },
+  "lait-coco": {
+    "nom": "Lait de coco",
+    "unite": "l",
+    "densite": 1,
+    "requetes": [
+      {
+        "categorie": "en:coconut-milks-and-creams",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:plant-based-milk-alternatives",
+      "en:coconut-based-drinks",
+      "en:plant-based-beverages",
+      "en:coconut-creams",
+      "en:desserts",
+      "en:frozen-foods",
+      "en:yogurts",
+      "en:plant-based-yogurt-alternatives",
+      "en:variety-packs"
+    ],
+    "exclure_nom": "cr[eè]me"
+  },
+  "boisson-soja": {
+    "nom": "Boisson au soja nature",
+    "unite": "l",
+    "densite": 1,
+    "requetes": [
+      {
+        "categorie": "en:soy-based-drinks",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:flavoured-plant-based-drinks",
+      "en:chocolate-drinks",
+      "en:sweetened-beverages",
+      "en:desserts",
+      "en:yogurts",
+      "en:plant-based-yogurt-alternatives",
+      "en:plant-based-creams"
+    ],
+    "exclure_nom": "chocolat|vanille|caf[eé]|fraise|banane|cr[eè]me|dessert"
+  },
+  "tofu-nature": {
+    "nom": "Tofu nature",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:plain-tofu",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:tofu",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:smoked-tofu",
+      "en:seitan",
+      "en:marinated-tofu",
+      "en:breaded-tofu",
+      "en:meals",
+      "en:desserts",
+      "en:flavoured-tofu",
+      "de:räuchertofu"
+    ]
+  },
+  "huile-olive": {
+    "nom": "Huile d'olive vierge extra",
+    "unite": "l",
+    "densite": 0.915,
+    "requetes": [
+      {
+        "categorie": "en:extra-virgin-olive-oils",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:flavoured-oils",
+      "en:sprays",
+      "en:cooking-sprays",
+      "en:spreads"
+    ]
+  },
+  "huile-colza": {
+    "nom": "Huile de colza",
+    "unite": "l",
+    "densite": 0.915,
+    "requetes": [
+      {
+        "categorie": "en:rapeseed-oils",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:margarines",
+      "en:spreads",
+      "en:spreadable-fats",
+      "en:oil-blends",
+      "en:sprays",
+      "en:mayonnaises"
+    ]
+  },
+  "huile-tournesol": {
+    "nom": "Huile de tournesol",
+    "unite": "l",
+    "densite": 0.92,
+    "requetes": [
+      {
+        "categorie": "en:sunflower-oils",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:margarines",
+      "en:spreads",
+      "en:spreadable-fats",
+      "en:oil-blends",
+      "en:sprays",
+      "en:mayonnaises",
+      "en:canned-fishes",
+      "en:fishes"
+    ]
+  },
+  "sucre": {
+    "nom": "Sucre blanc en poudre",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:white-sugars",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:caster-sugars",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:granulated-sugars",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:vanilla-sugars",
+      "en:vanillin-sugars",
+      "en:powdered-sugars",
+      "en:lump-sugar",
+      "en:brown-sugars",
+      "en:cassonades",
+      "fr:cassonades",
+      "en:jam-sugars",
+      "en:gelling-sugars",
+      "en:pearl-sugars",
+      "en:candies",
+      "en:chocolates",
+      "en:snacks"
+    ]
+  },
+  "haricot-rouge-conserve": {
+    "nom": "Haricots rouges en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-red-kidney-beans",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-meals",
+      "en:chili-con-carne",
+      "en:prepared-vegetables",
+      "en:soups"
+    ]
+  },
+  "haricot-blanc-sec": {
+    "nom": "Haricots blancs secs",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:white-beans",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:white-beans",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:canned-foods",
+      "en:canned-legumes",
+      "en:meals",
+      "en:prepared-vegetables",
+      "en:cooked-vegetables",
+      "en:frozen-foods",
+      "en:baked-beans-in-tomato-sauce",
+      "en:soups"
+    ]
+  },
+  "haricot-blanc-conserve": {
+    "nom": "Haricots blancs en conserve (au naturel)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-white-common-beans",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-meals",
+      "en:baked-beans-in-tomato-sauce",
+      "en:canned-haricot-beans-with-tomato-sauce",
+      "en:prepared-vegetables",
+      "en:soups"
+    ]
+  },
+  "mais-conserve": {
+    "nom": "Maïs doux en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-sweet-corn",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:salads",
+      "en:frozen-foods",
+      "en:mixed-vegetables"
+    ]
+  },
+  "petit-pois-conserve": {
+    "nom": "Petits pois en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-peas",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-meals",
+      "en:mixed-vegetables",
+      "en:peas-and-carrots",
+      "en:frozen-foods",
+      "en:soups"
+    ]
+  },
+  "haricot-vert-conserve": {
+    "nom": "Haricots verts en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:canned-green-beans",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-meals",
+      "en:mixed-vegetables",
+      "en:frozen-foods",
+      "en:salads"
+    ]
+  },
+  "bouillon-cube": {
+    "nom": "Bouillon de légumes (cubes)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:bouillon-cubes",
+        "mode": "produit"
+      }
+    ],
+    "exiger": [
+      "en:vegetable-broths"
+    ],
+    "exclure": [
+      "en:poultry-broth",
+      "en:beef-broth",
+      "en:dehydrated-poultry-stock",
+      "en:fish-stocks",
+      "en:meals",
+      "en:soups"
+    ]
+  },
+  "sauce-soja": {
+    "nom": "Sauce soja",
+    "unite": "l",
+    "densite": 1.15,
+    "requetes": [
+      {
+        "categorie": "en:soy-sauces",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:marinades",
+      "en:cooking-sauces",
+      "en:meals",
+      "en:sweet-and-sour-sauces",
+      "en:teriyaki-sauces"
+    ]
+  },
+  "beurre-cacahuete": {
+    "nom": "Beurre de cacahuète",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:peanut-butters",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:chocolate-spreads",
+      "en:cocoa-and-hazelnuts-spreads",
+      "en:snacks",
+      "en:biscuits",
+      "en:candies",
+      "en:chocolates",
+      "en:cereal-bars",
+      "en:protein-bars"
+    ]
+  },
+  "chou-vert": {
+    "nom": "Chou vert",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:cabbages",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:cabbages",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:red-cabbage",
+      "en:fresh-red-cabbage",
+      "en:canned-foods",
+      "en:fermented-vegetables",
+      "en:sauerkrauts",
+      "en:meals",
+      "en:salads",
+      "en:prepared-vegetables",
+      "en:frozen-foods",
+      "fr:crudites",
+      "en:vegetables-freshly-prepared",
+      "en:chinese-cabbage",
+      "en:kale",
+      "en:brussels-sprouts"
+    ],
+    "exclure_nom": "m[ée]lange|carotte|r[aâ]p[ée]|chinois|kale"
+  },
+  "betterave-cuite": {
+    "nom": "Betteraves rouges cuites",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:cooked-beetroots",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:prepared-salads",
+      "en:beets-salads",
+      "en:salads",
+      "en:pickles",
+      "en:soups",
+      "en:juices"
+    ],
+    "exclure_nom": "salade|[ée]chalote|vinaigr|aigre"
+  },
+  "courge-butternut": {
+    "nom": "Courge butternut",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:butternut-squashes",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:butternut-squashes",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:soups",
+      "en:frozen-foods",
+      "en:purees",
+      "en:meals",
+      "en:canned-foods",
+      "en:baby-foods"
+    ]
+  },
+  "coriandre-fraiche": {
+    "nom": "Coriandre fraîche",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:coriander-leaves",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:coriander-leaves",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:dried-herbs",
+      "en:dried-coriander",
+      "en:frozen-foods",
+      "en:frozen-aromatic-plants",
+      "en:spices",
+      "en:ground-spices",
+      "en:sauces",
+      "en:pastes",
+      "en:groceries",
+      "en:Groceries",
+      "fr:epicerie",
+      "fr:Epicerie",
+      "en:ground-coriander-leaves",
+      "fr:condiments-a-tartiner",
+      "en:dried-plant-based-foods"
+    ],
+    "exclure_nom": "s[eé]ch|lyophil|moulu|poudre|pesto|tartiner|recharge|flacon"
+  },
+  "basilic": {
+    "nom": "Basilic frais",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:basils",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:basils",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:pestos",
+      "en:sauces",
+      "en:pasta-sauces",
+      "en:dried-basils",
+      "en:frozen-foods",
+      "en:frozen-aromatic-plants",
+      "en:beverages",
+      "en:herbal-teas",
+      "en:spices",
+      "en:pastes",
+      "en:groceries",
+      "en:Groceries",
+      "fr:epicerie",
+      "fr:Epicerie",
+      "en:ground-coriander-leaves",
+      "fr:condiments-a-tartiner",
+      "en:dried-plant-based-foods"
+    ],
+    "exclure_nom": "s[eé]ch|lyophil|moulu|poudre|pesto|tartiner|recharge|flacon"
+  },
+  "epinard-surgele": {
+    "nom": "Épinards surgelés",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:frozen-spinachs",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:pizzas",
+      "en:pies",
+      "en:creamed-spinach",
+      "en:spinach-with-cream",
+      "en:frozen-ready-made-meals"
+    ]
+  },
+  "haricot-vert-surgele": {
+    "nom": "Haricots verts surgelés",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:frozen-green-beans",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:mixed-vegetables",
+      "en:frozen-mixed-vegetables",
+      "en:frozen-ready-made-meals",
+      "en:canned-foods"
+    ]
+  },
+  "petit-pois-surgele": {
+    "nom": "Petits pois surgelés",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:frozen-green-peas",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:mixed-vegetables",
+      "en:peas-and-carrots",
+      "en:frozen-mixed-vegetables",
+      "en:frozen-ready-made-meals",
+      "en:canned-foods"
+    ]
+  },
+  "beurre": {
+    "nom": "Beurre doux",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:butters",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:salted-butters",
+      "en:semi-salted-butters",
+      "en:light-butters",
+      "en:reduced-fat-butters",
+      "en:spreadable-butters",
+      "en:clarified-butters",
+      "en:ghee",
+      "en:margarines",
+      "en:plant-based-spreads",
+      "en:cocoa-butters",
+      "en:peanut-butters",
+      "en:nut-butters",
+      "en:shea-butters",
+      "en:biscuits",
+      "en:cakes",
+      "en:snacks",
+      "en:meals",
+      "en:herb-butters",
+      "en:flavoured-butters"
+    ],
+    "exclure_nom": "demi[- ]?sel|\\bsal[ée]|cristaux de sel|all[eé]g|tartiner|\\bdoux? et sal"
+  },
+  "creme-fraiche": {
+    "nom": "Crème fraîche épaisse",
+    "unite": "kg",
+    "densite": 1,
+    "requetes": [
+      {
+        "categorie": "en:fermented-creams",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "fr:cremes-legeres",
+      "en:light-creams",
+      "en:light-fermented-creams",
+      "en:whipped-creams",
+      "en:sour-creams",
+      "en:uht-creams",
+      "en:plant-based-creams",
+      "en:desserts",
+      "en:meals",
+      "en:sauces"
+    ],
+    "exclure_nom": "l[eé]g[eè]re|all[eé]g|liquide|fluide"
+  },
+  "emmental-rape": {
+    "nom": "Emmental râpé",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:grated-emmentaler",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:prepared-salads",
+      "en:fromages-alleges",
+      "fr:fromages-alleges",
+      "en:light-cheeses"
+    ]
+  },
+  "parmesan": {
+    "nom": "Parmesan (Parmigiano Reggiano)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:parmigiano-reggiano",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:sauces",
+      "en:pestos",
+      "en:snacks",
+      "en:crackers",
+      "en:biscuits",
+      "en:pasta-sauces"
+    ]
+  },
+  "cuisse-poulet": {
+    "nom": "Cuisses de poulet",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:chicken-thighs",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:chicken-thighs",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:cooked-chicken",
+      "en:cooked-poultries",
+      "en:breaded-products",
+      "en:breaded-chicken",
+      "en:meals",
+      "en:marinated-meats",
+      "en:frozen-ready-made-meals"
+    ]
+  },
+  "blanc-poulet": {
+    "nom": "Filets de poulet",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:chicken-breasts",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:chicken-breasts",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:cooked-chicken",
+      "en:cooked-poultries",
+      "en:breaded-products",
+      "en:breaded-chicken",
+      "en:meals",
+      "en:marinated-meats",
+      "en:sliced-chicken",
+      "en:chicken-slices",
+      "en:prepared-meats",
+      "en:frozen-ready-made-meals"
+    ]
+  },
+  "chorizo": {
+    "nom": "Chorizo",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:chorizo",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:pizzas",
+      "en:sandwiches",
+      "en:snacks",
+      "en:appetizers",
+      "en:salads"
+    ]
+  },
+  "saucisse-toulouse": {
+    "nom": "Saucisses de Toulouse",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:toulouse-sausages",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:canned-foods",
+      "en:cooked-dishes",
+      "en:frozen-ready-made-meals"
+    ]
+  },
+  "lardon": {
+    "nom": "Lardons",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:lardons",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:quiches",
+      "en:pizzas",
+      "en:poultry-lardons",
+      "en:salads"
+    ]
+  },
+  "poisson-blanc-surgele": {
+    "nom": "Filets de poisson blanc surgelés (nature)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:frozen-fishes",
+        "mode": "produit"
+      }
+    ],
+    "exiger": [
+      "en:lean-fishes",
+      "en:fish-fillets"
+    ],
+    "exclure": [
+      "en:breaded-products",
+      "en:breaded-fish",
+      "en:fish-fingers",
+      "en:meals",
+      "en:meals-with-fish",
+      "en:fish-preparations",
+      "en:smoked-fishes",
+      "en:combination-meals",
+      "en:frozen-ready-made-meals",
+      "en:fishes-in-sauce"
+    ]
+  },
+  "pois-casse": {
+    "nom": "Pois cassés",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:dried-split-peas",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:dried-split-peas",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:soups",
+      "en:canned-foods",
+      "en:flours",
+      "en:snacks"
+    ]
+  },
+  "pates-sans-gluten": {
+    "nom": "Pâtes sèches sans gluten",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:dry-pastas",
+        "mode": "produit"
+      }
+    ],
+    "exiger_label_un_de": [
+      "en:no-gluten",
+      "en:gluten-free"
+    ],
+    "exclure": [
+      "en:meals",
+      "en:fresh-pastas",
+      "en:stuffed-pastas",
+      "en:instant-noodles",
+      "en:soups",
+      "en:frozen-foods"
+    ]
+  },
+  "feuille-lasagne": {
+    "nom": "Feuilles de lasagne sèches",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:lasagna-sheets",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:fresh-pastas",
+      "en:meals",
+      "en:lasagnas",
+      "en:frozen-foods",
+      "en:refrigerated-foods"
+    ]
+  },
+  "tortilla-ble": {
+    "nom": "Tortillas de blé (wraps)",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:flatbreads",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:sandwiches",
+      "en:meals",
+      "en:corn-tortillas",
+      "en:gluten-free-breads",
+      "en:chips-and-fries",
+      "en:crisps",
+      "en:salty-snacks"
+    ],
+    "exiger_nom": "tortilla|wrap|fajita",
+    "exclure_nom": "ma[iï]s|corn|sans gluten|chips"
+  },
+  "baguette": {
+    "nom": "Baguette",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:baguettes",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:baguettes",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:sandwiches",
+      "en:meals",
+      "en:frozen-foods",
+      "en:garlic-breads",
+      "en:pizzas",
+      "en:gluten-free-breads"
+    ]
+  },
+  "olive-noire": {
+    "nom": "Olives noires",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:black-olives",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:tapenades",
+      "en:pizzas",
+      "en:spreads",
+      "en:olive-oils",
+      "en:appetizers-mixes",
+      "en:meals"
+    ]
+  },
+  "thon-conserve": {
+    "nom": "Thon au naturel en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:tunas-in-brine",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:tunas-in-oil",
+      "en:meals",
+      "en:salads",
+      "en:spreads",
+      "en:tuna-in-sauce",
+      "en:prepared-salads"
+    ]
+  },
+  "sardine-conserve": {
+    "nom": "Sardines à la tomate en conserve",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:sardines-in-tomato-sauce",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:meals",
+      "en:spreads",
+      "en:rillettes"
+    ]
+  },
+  "creme-soja": {
+    "nom": "Crème de soja (cuisine)",
+    "unite": "l",
+    "densite": 1,
+    "requetes": [
+      {
+        "categorie": "en:soy-based-creams-for-cooking",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:desserts",
+      "en:whipped-creams",
+      "en:yogurts",
+      "en:plant-based-yogurt-alternatives"
+    ]
+  },
+  "cacahuete": {
+    "nom": "Cacahuètes",
+    "unite": "kg",
+    "requetes": [
+      {
+        "categorie": "en:peanuts",
+        "mode": "produit"
+      },
+      {
+        "categorie": "en:peanuts",
+        "mode": "vrac"
+      }
+    ],
+    "exclure": [
+      "en:peanut-butters",
+      "en:spreads",
+      "en:coated-peanuts",
+      "en:candies",
+      "en:chocolates",
+      "en:confectioneries",
+      "en:biscuits",
+      "en:cereal-bars",
+      "en:oils",
+      "en:flours",
+      "en:sauces",
+      "en:mixed-nuts",
+      "en:nut-mixes",
+      "en:appetizers-mixes"
+    ],
+    "exclure_nom": "sal[ée]|enrob|caram|miel|chocolat|ap[ée]ritif|aromatis|épic|piment"
+  },
+  "moutarde": {
+    "nom": "Moutarde de Dijon",
+    "unite": "kg",
+    "densite": 1,
+    "requetes": [
+      {
+        "categorie": "en:dijon-mustards",
+        "mode": "produit"
+      }
+    ],
+    "exclure": [
+      "en:mustard-seeds",
+      "en:old-fashioned-mustards",
+      "en:flavoured-mustards",
+      "en:sauces-with-mustard",
+      "en:mayonnaises",
+      "en:vinaigrettes"
+    ]
+  }
+}

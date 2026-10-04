@@ -1,0 +1,90 @@
+{
+  "numero": 17,
+  "slug": "oeufs-brouilles-a-la-tomate",
+  "titre": "Œufs brouillés sautés à la tomate",
+  "chapeau": "Le classique des cuisines chinoises familiales : des œufs moelleux et des tomates fondantes sur du riz.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "tomate",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 6,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire le riz.",
+    "Coupe les tomates en quartiers et émince finement l'oignon.",
+    "Bats les œufs. Verse-les dans une poêle froide avec l'huile, puis allume à feu moyen.",
+    "Pousse doucement les œufs pendant 2 à 3 min : ils doivent rester un peu baveux. Réserve-les.",
+    "Dans la même poêle, fais sauter l'oignon et les tomates 3 min.",
+    "Ajoute le demi-cube émietté, une pincée de sucre et 50 ml d'eau. Laisse 2 min.",
+    "Remets les œufs, mélange une fois et sers sur le riz."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan au tofu",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "oeuf",
+          "par": {
+            "ref": "tofu-nature",
+            "qte": 300,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Le riz de la veille marche très bien, réchauffé à la poêle.",
+  "source": {
+    "type": "themealdb",
+    "id": "53372",
+    "url": "https://www.themealdb.com/meal/53372"
+  },
+  "statut": "non-testee"
+}

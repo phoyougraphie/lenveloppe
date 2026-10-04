@@ -1,0 +1,110 @@
+{
+  "numero": 39,
+  "slug": "spaghetti-aux-sardines",
+  "titre": "Spaghetti aux sardines à la tomate",
+  "chapeau": "Une boîte de sardines, des olives et des pâtes : une puttanesca du placard.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "pates",
+      "qte": 350,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 15,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "sardine-conserve",
+      "qte": 270,
+      "unite": "g"
+    },
+    {
+      "ref": "olive-noire",
+      "qte": 70,
+      "unite": "g"
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Lance la cuisson des pâtes dans l'eau salée.",
+    "Fais revenir l'oignon, l'ail et le piment 4 min dans l'huile.",
+    "Ajoute le concentré, remue 1 min, puis les tomates.",
+    "Ajoute les sardines avec leur sauce et écrase-les à la cuillère.",
+    "Ajoute les olives et laisse mijoter 5 min.",
+    "Égoutte les pâtes en gardant un peu d'eau et mélange le tout."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux pois chiches",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "sardine-conserve",
+          "par": {
+            "ref": "pois-chiche-conserve",
+            "qte": 240,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "pates",
+          "par": {
+            "ref": "pates-sans-gluten",
+            "qte": 350,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Les sardines en boîte apportent des oméga-3 pour pas cher. Les arêtes s'écrasent et se mangent.",
+  "source": {
+    "type": "themealdb",
+    "id": "52837",
+    "url": "https://www.themealdb.com/meal/52837"
+  },
+  "statut": "non-testee"
+}

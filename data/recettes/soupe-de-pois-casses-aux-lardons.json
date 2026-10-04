@@ -1,0 +1,83 @@
+{
+  "numero": 40,
+  "slug": "soupe-de-pois-casses-aux-lardons",
+  "titre": "Soupe de pois cassés aux lardons",
+  "chapeau": "La soupe épaisse d'hiver : des pois cassés, des légumes et quelques lardons pour le fumé.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 60,
+  "ingredients": [
+    {
+      "ref": "pois-casse",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "lardon",
+      "qte": 200,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "poireau",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "petit-pois-surgele",
+      "qte": 200,
+      "unite": "g"
+    },
+    {
+      "ref": "laurier",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Rince les pois cassés.",
+    "Fais dorer les lardons à sec dans une grande cocotte.",
+    "Ajoute les oignons, les carottes et le poireau en morceaux. Laisse 5 min.",
+    "Ajoute les pois cassés, le laurier et 2 litres d'eau.",
+    "Laisse mijoter 50 min, en remuant de temps en temps et en rajoutant de l'eau si besoin.",
+    "Ajoute les petits pois et laisse 5 min.",
+    "Retire le laurier, mixe en partie si tu veux, poivre et goûte avant de saler."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [],
+      "ajoute": [],
+      "retire": [
+        "lardon"
+      ]
+    }
+  ],
+  "note": "La recette d'origine cuit un jarret de porc pendant 2 h ; les lardons donnent le goût en une heure. Épaissit en refroidissant.",
+  "source": {
+    "type": "themealdb",
+    "id": "52925",
+    "url": "https://www.themealdb.com/meal/52925"
+  },
+  "statut": "non-testee"
+}

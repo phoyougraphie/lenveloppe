@@ -1,0 +1,83 @@
+{
+  "numero": 16,
+  "slug": "patatas-bravas",
+  "titre": "Patatas bravas",
+  "chapeau": "Des pommes de terre rôties sous une sauce tomate pimentée : à partager en plat ou en accompagnement.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 45,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 900,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 60,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 15,
+      "unite": "g"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Préchauffe le four à 200 °C.",
+    "Coupe les pommes de terre en gros dés, sèche-les et mélange-les avec 30 ml d'huile et du sel.",
+    "Enfourne 40 à 45 min, en remuant à mi-cuisson.",
+    "Pendant ce temps, fais revenir l'oignon haché 5 min dans le reste d'huile.",
+    "Ajoute l'ail, les tomates, le concentré, le paprika, le piment et une pincée de sucre.",
+    "Laisse mijoter 10 min, jusqu'à obtenir une sauce épaisse.",
+    "Verse la sauce sur les pommes de terre et parsème de persil."
+  ],
+  "variantes": [],
+  "note": "Pour en faire un repas complet, ajoute un œuf au plat par personne ou un bol de pois chiches.",
+  "source": {
+    "type": "themealdb",
+    "id": "53172",
+    "url": "https://www.themealdb.com/meal/53172"
+  },
+  "statut": "non-testee"
+}

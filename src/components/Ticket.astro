@@ -1,0 +1,64 @@
+---
+import { B } from '../lib/lien';
+import Codebarre from './Codebarre.astro';
+import Montants from './Montants.astro';
+import Regimes from './Regimes.astro';
+import {
+  calculerTicket, regimesDe, recettes, numero, NIVEAUX, LIBELLE_NIVEAU, type Recette,
+} from '../lib/donnees';
+
+interface Props { r: Recette; titreNiveau?: 'h1' | 'h2'; lien?: boolean; classe?: string; id?: string; hidden?: boolean }
+const { r, titreNiveau = 'h1', lien = false, classe = '', id, hidden = false } = Astro.props;
+const t = calculerTicket(r.ingredients, r.portions);
+const regimes = regimesDe(r.ingredients, r.portions);
+const Titre = titreNiveau;
+const prefixeTotal = Object.fromEntries(NIVEAUX.map((n) => [n, t.manquants[n] ? '≥ ' : '']));
+const minutes = r.prep_min + (r.cuisson_min ?? 0);
+---
+<article class={`ticket trois ${classe}`} id={id} hidden={hidden} data-slug={r.slug}>
+  <div class="ticket-tete">
+    <span>{numero(r.numero)}</span>
+    <span>Idée {r.numero} sur {recettes.length}</span>
+  </div>
+  <hr />
+  <Titre class="titre-l" style="margin:.4rem 0 .6rem">{lien ? <a href={`${B}/recettes/${r.slug}/`} style="text-decoration:none">{r.titre}</a> : r.titre}</Titre>
+  {r.chapeau && <p style="margin:0 0 .8rem;max-width:30rem">{r.chapeau}</p>}
+  <Regimes regimes={regimes} />
+  <div class="ticket-tete" style="margin-top:.6rem">
+    <span>Pour {r.portions}</span><span>{minutes} min{r.cuisson_min ? ` dont ${r.prep_min} de prépa` : ''}</span>
+  </div>
+  <hr />
+  <div class="ligne petit" aria-hidden="true">
+    <span></span>
+    <span class="val">{NIVEAUX.map((n, i) => <Fragment>{i > 0 && <span class="sep"> / </span>}<span class={`n n-${n}`}>{LIBELLE_NIVEAU[n] === 'Premier prix' ? '1er prix' : LIBELLE_NIVEAU[n]}</span></Fragment>)}</span>
+  </div>
+  {t.lignes.map((l) => (
+    <div class="ligne">
+      <span class="lib"><span>{l.nom} {l.quantite}</span></span>
+      <Montants m={l.montants} />
+    </div>
+  ))}
+  {t.placard.length > 0 && <p class="petit" style="margin:.5rem 0 0">Hors ticket (placard) : {t.placard.join(', ')}</p>}
+  <hr />
+  <div class="ligne total">
+    <span class="lib"><span>Total pour {r.portions}</span></span>
+    <Montants m={t.total} suffixe=" €" prefixe={prefixeTotal} />
+  </div>
+  <div class="ligne">
+    <span class="lib"><span>Soit par personne</span></span>
+    <Montants m={t.parPersonne} suffixe=" €" prefixe={prefixeTotal} />
+  </div>
+  <hr />
+  {NIVEAUX.some((n) => t.manquants[n]) && (
+    <p class="petit" style="margin:0 0 .4rem">— = prix non suivi par une source publique. ≥ = total sans ces lignes.</p>
+  )}
+  {t.sources.length > 0 ? (
+    t.sources.map((s) => <p class="petit" style="margin:0">Source : {s.url ? <a href={s.url}>{s.source}</a> : s.source}{s.periode && ` · ${s.periode}`}</p>)
+  ) : (
+    <p class="petit" style="margin:0">Prix en cours de relevé : aucun chiffre tant qu’il n’est pas sourcé.</p>
+  )}
+  <div style="margin-top:1.1rem;display:grid;gap:.35rem">
+    <Codebarre n={r.numero} />
+    <span class="petit">{numero(r.numero)} · {r.statut === 'testee' ? 'Recette testée' : 'Recette pas encore testée par nous'}</span>
+  </div>
+</article>

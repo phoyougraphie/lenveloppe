@@ -1,0 +1,114 @@
+{
+  "numero": 34,
+  "slug": "poulet-a-la-moutarde",
+  "titre": "Poulet à la moutarde",
+  "chapeau": "Des cuisses dorées puis mijotées dans une sauce crème-moutarde : un classique du dimanche, en semaine.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 40,
+  "ingredients": [
+    {
+      "ref": "cuisse-poulet",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "ail",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "moutarde",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "creme-fraiche",
+      "qte": 200,
+      "unite": "g"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Sèche les cuisses, frotte-les avec le paprika, le sel et le poivre.",
+    "Fais-les dorer 10 min dans l'huile, dans une cocotte. Réserve-les.",
+    "Fais revenir l'oignon et l'ail hachés 2 min.",
+    "Verse 500 ml d'eau chaude avec le cube et gratte bien le fond.",
+    "Remets le poulet, couvre et laisse mijoter 25 min.",
+    "Pendant ce temps, fais cuire le riz.",
+    "Sors le poulet, ajoute la moutarde et la crème dans la cocotte et laisse réduire 5 min.",
+    "Nappe le poulet de sauce et parsème de persil."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux pois chiches",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "cuisse-poulet",
+          "par": {
+            "ref": "pois-chiche-conserve",
+            "qte": 720,
+            "unite": "g"
+          }
+        },
+        {
+          "de": "creme-fraiche",
+          "par": {
+            "ref": "creme-soja",
+            "qte": 200,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "La recette d'origine met du miel ; une cuillère de sucre fait le même travail.",
+  "source": {
+    "type": "themealdb",
+    "id": "53530",
+    "url": "https://www.themealdb.com/meal/53530"
+  },
+  "statut": "non-testee"
+}

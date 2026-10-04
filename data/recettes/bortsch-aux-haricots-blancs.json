@@ -1,0 +1,82 @@
+{
+  "numero": 15,
+  "slug": "bortsch-aux-haricots-blancs",
+  "titre": "Bortsch aux haricots blancs",
+  "chapeau": "Une soupe rouge vif de betteraves et de pommes de terre, avec des haricots pour tenir.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 30,
+  "ingredients": [
+    {
+      "ref": "betterave-cuite",
+      "qte": 500,
+      "unite": "g"
+    },
+    {
+      "ref": "pomme-de-terre",
+      "qte": 450,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "haricot-blanc-conserve",
+      "qte": 240,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "vinaigre",
+      "qte": 10,
+      "unite": "ml"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais revenir l'oignon haché et la carotte râpée 5 min dans l'huile.",
+    "Ajoute les pommes de terre en dés, 1,5 litre d'eau et le cube de bouillon.",
+    "Laisse cuire 15 min.",
+    "Ajoute les betteraves en dés et laisse cuire encore 5 min.",
+    "Ajoute les haricots rincés et le vinaigre, laisse chauffer 5 min.",
+    "Sale, poivre et parsème de persil."
+  ],
+  "variantes": [],
+  "note": "Les betteraves déjà cuites du rayon frais font gagner une heure. Se garde 3 jours au frigo.",
+  "source": {
+    "type": "themealdb",
+    "id": "53078",
+    "url": "https://www.themealdb.com/meal/53078"
+  },
+  "statut": "non-testee"
+}

@@ -1,0 +1,121 @@
+{
+  "numero": 29,
+  "slug": "poulet-basquaise",
+  "titre": "Poulet basquaise",
+  "chapeau": "Poulet, poivrons et un peu de chorizo, mijotés en cocotte et servis avec du riz.",
+  "portions": 4,
+  "prep_min": 20,
+  "cuisson_min": 50,
+  "ingredients": [
+    {
+      "ref": "cuisse-poulet",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 45,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "chorizo",
+      "qte": 100,
+      "unite": "g"
+    },
+    {
+      "ref": "ail",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 30,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 300,
+      "unite": "g"
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "laurier",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "thym",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais dorer les cuisses dans l'huile, dans une cocotte. Sale, poivre, puis réserve.",
+    "Fais revenir les oignons et les poivrons en lanières 10 min.",
+    "Ajoute le chorizo en rondelles, l'ail et le paprika. Laisse 2 min.",
+    "Ajoute le concentré, les tomates, le laurier, le thym et le cube délayé dans 350 ml d'eau.",
+    "Remets le poulet, couvre et laisse mijoter 35 min.",
+    "Pendant ce temps, fais cuire le riz."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux haricots blancs",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "cuisse-poulet",
+          "par": {
+            "ref": "haricot-blanc-conserve",
+            "qte": 720,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": [
+        "chorizo"
+      ]
+    }
+  ],
+  "note": "La recette d'origine ajoute du vin blanc : on le remplace par de l'eau, sans regret.",
+  "source": {
+    "type": "themealdb",
+    "id": "52934",
+    "url": "https://www.themealdb.com/meal/52934"
+  },
+  "statut": "non-testee"
+}

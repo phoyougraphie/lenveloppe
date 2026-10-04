@@ -1,0 +1,127 @@
+{
+  "numero": 37,
+  "slug": "puree-au-chou-et-saucisses",
+  "titre": "Purée au chou et saucisses",
+  "chapeau": "Le stamppot hollandais : pommes de terre et chou écrasés ensemble, avec une saucisse dessus.",
+  "portions": 4,
+  "prep_min": 20,
+  "cuisson_min": 30,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 1200,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "beurre",
+      "qte": 40,
+      "unite": "g"
+    },
+    {
+      "ref": "chou-vert",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "saucisse-toulouse",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "lait",
+      "qte": 250,
+      "unite": "ml"
+    },
+    {
+      "ref": "laurier",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "muscade",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire les pommes de terre en morceaux 20 min à l'eau salée avec le laurier.",
+    "Émince finement le chou en retirant les grosses côtes.",
+    "Fais fondre l'oignon haché dans le beurre, ajoute le chou et laisse fondre 10 min à couvert.",
+    "Fais cuire les saucisses 15 min à la poêle à feu moyen, en les retournant.",
+    "Égoutte les pommes de terre, retire le laurier et écrase-les avec le lait chaud.",
+    "Mélange avec le chou, ajoute la muscade, sale et poivre.",
+    "Sers avec une saucisse par personne."
+  ],
+  "variantes": [
+    {
+      "titre": "Végétarienne à l'œuf",
+      "regime": "vegetarien",
+      "remplace": [
+        {
+          "de": "saucisse-toulouse",
+          "par": {
+            "ref": "oeuf",
+            "qte": 4,
+            "unite": "piece"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Version vegan aux haricots blancs",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "saucisse-toulouse",
+          "par": {
+            "ref": "haricot-blanc-conserve",
+            "qte": 480,
+            "unite": "g"
+          }
+        },
+        {
+          "de": "beurre",
+          "par": {
+            "ref": "huile-olive",
+            "qte": 40,
+            "unite": "ml"
+          }
+        },
+        {
+          "de": "lait",
+          "par": {
+            "ref": "boisson-soja",
+            "qte": 250,
+            "unite": "ml"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "La recette d'origine utilise du chou kale ; le chou vert est moins cher et se trouve partout. Les restes font de bonnes galettes poêlées.",
+  "source": {
+    "type": "themealdb",
+    "id": "52980",
+    "url": "https://www.themealdb.com/meal/52980"
+  },
+  "statut": "non-testee"
+}

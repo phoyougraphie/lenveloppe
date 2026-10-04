@@ -1,0 +1,87 @@
+{
+  "numero": 9,
+  "slug": "curry-de-haricots-rouges",
+  "titre": "Curry de haricots rouges",
+  "chapeau": "Deux boîtes de haricots, une boîte de tomates, des épices : 35 minutes et c'est servi.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 25,
+  "ingredients": [
+    {
+      "ref": "huile-tournesol",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "coriandre-fraiche",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "haricot-rouge-conserve",
+      "qte": 500,
+      "unite": "g"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "gingembre-moulu",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "curry-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais fondre l'oignon haché 8 min à feu moyen dans l'huile, avec une pincée de sel.",
+    "Ajoute l'ail, le gingembre et les tiges de coriandre hachées. Remue 2 min.",
+    "Ajoute le cumin, le paprika et le curry. Remue 1 min.",
+    "Verse les tomates et les haricots rincés. Porte à ébullition.",
+    "Laisse mijoter 15 min, jusqu'à ce que la sauce épaississe.",
+    "Pendant ce temps, fais cuire le riz. Sers avec les feuilles de coriandre."
+  ],
+  "variantes": [],
+  "note": "Se congèle bien. Les haricots rouges peuvent être remplacés par des pois chiches au même poids.",
+  "source": {
+    "type": "themealdb",
+    "id": "52868",
+    "url": "https://www.themealdb.com/meal/52868"
+  },
+  "statut": "non-testee"
+}

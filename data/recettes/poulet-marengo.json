@@ -1,0 +1,84 @@
+{
+  "numero": 27,
+  "slug": "poulet-marengo",
+  "titre": "Poulet Marengo",
+  "chapeau": "Des cuisses de poulet mijotées dans la tomate avec champignons et olives.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 45,
+  "ingredients": [
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "champignon-paris",
+      "qte": 300,
+      "unite": "g"
+    },
+    {
+      "ref": "cuisse-poulet",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 500,
+      "unite": "g"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "olive-noire",
+      "qte": 100,
+      "unite": "g"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais sauter les champignons émincés dans l'huile, dans une cocotte, jusqu'à ce qu'ils ramollissent.",
+    "Ajoute les cuisses et fais-les colorer de chaque côté.",
+    "Verse les tomates, émiette le cube et ajoute les olives.",
+    "Poivre : le cube et les olives salent déjà assez.",
+    "Couvre et laisse mijoter 40 min.",
+    "Parsème de persil."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux lentilles",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "cuisse-poulet",
+          "par": {
+            "ref": "lentille-verte",
+            "qte": 250,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Se sert avec des pâtes ou une purée. Version lentilles : mets-les crues à la place du poulet avec 500 ml d'eau en plus, 30 min suffisent.",
+  "source": {
+    "type": "themealdb",
+    "id": "52920",
+    "url": "https://www.themealdb.com/meal/52920"
+  },
+  "statut": "non-testee"
+}

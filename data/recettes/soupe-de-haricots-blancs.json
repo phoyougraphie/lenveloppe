@@ -1,0 +1,78 @@
+{
+  "numero": 11,
+  "slug": "soupe-de-haricots-blancs",
+  "titre": "Soupe de haricots blancs",
+  "chapeau": "Des haricots secs, des légumes et du temps : la soupe la moins chère du carnet, qui cale vraiment.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 120,
+  "ingredients": [
+    {
+      "ref": "haricot-blanc-sec",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 70,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "herbes-provence",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "La veille, mets les haricots à tremper dans un grand volume d'eau froide.",
+    "Égoutte et rince-les.",
+    "Fais revenir un oignon haché et les carottes en rondelles 2 min dans l'huile.",
+    "Ajoute les haricots, 1,5 litre d'eau, les poivrons entiers, le deuxième oignon entier, le concentré et les herbes.",
+    "Porte à ébullition puis laisse frémir 2 h à couvert, jusqu'à ce que les haricots soient tendres.",
+    "Sors les poivrons et l'oignon entiers. Écrase l'oignon, pèle et coupe les poivrons, et remets le tout.",
+    "Sale, poivre et parsème de persil."
+  ],
+  "variantes": [],
+  "note": "Le travail réel est de 15 min ; le reste, c'est la casserole qui bosse. Se congèle très bien.",
+  "source": {
+    "type": "themealdb",
+    "id": "53486",
+    "url": "https://www.themealdb.com/meal/53486"
+  },
+  "statut": "non-testee"
+}

@@ -1,0 +1,10 @@
+---
+// Trois valeurs « 0,98 / 1,35 / 2,40 » ; le CSS décide lesquelles montrer selon le curseur.
+import { NIVEAUX, LIBELLE_NIVEAU, euros, eurosSigne, type Montants } from '../lib/donnees';
+interface Props { m: Montants; suffixe?: string; signe?: boolean; prefixe?: Partial<Record<string, string>> }
+const { m, suffixe = '', signe = false, prefixe = {} } = Astro.props;
+const f = signe ? eurosSigne : euros;
+---
+<span class="val">{NIVEAUX.map((n, i) => (
+  <Fragment>{i > 0 && <span class="sep" aria-hidden="true"> / </span>}<span class={`n n-${n}`}><span class="vh">{LIBELLE_NIVEAU[n]} : </span>{m[n] === null ? '—' : `${prefixe[n] ?? ''}${f(m[n])}${suffixe}`}</span></Fragment>
+))}</span>

@@ -1,0 +1,63 @@
+{
+  "numero": 4,
+  "slug": "tortilla-de-pommes-de-terre",
+  "titre": "Tortilla de pommes de terre",
+  "chapeau": "Six œufs, des patates, un oignon : elle se mange chaude le soir et froide le lendemain midi.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 35,
+  "ingredients": [
+    {
+      "ref": "pomme-de-terre",
+      "qte": 600,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 60,
+      "unite": "ml"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 6,
+      "unite": "piece"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Épluche les pommes de terre et coupe-les en fines tranches.",
+    "Fais fondre l'oignon émincé 10 min à feu doux dans l'huile, sans le colorer.",
+    "Ajoute les pommes de terre, couvre et laisse cuire 15 min en remuant de temps en temps.",
+    "Bats les œufs avec le sel et le poivre, puis verse-les sur les pommes de terre.",
+    "Couvre et laisse prendre 10 min à feu très doux.",
+    "Fais glisser la tortilla sur une assiette, retourne-la dans la poêle et laisse dorer 3 min.",
+    "Parsème de persil haché."
+  ],
+  "variantes": [],
+  "note": "Se garde 2 jours au frigo. Coupée en carrés, elle fait une gamelle facile.",
+  "source": {
+    "type": "themealdb",
+    "id": "52872",
+    "url": "https://www.themealdb.com/meal/52872"
+  },
+  "statut": "non-testee"
+}

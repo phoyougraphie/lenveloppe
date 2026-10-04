@@ -1,0 +1,110 @@
+{
+  "numero": 8,
+  "slug": "koshari",
+  "titre": "Koshari",
+  "chapeau": "Le plat de rue égyptien : riz, lentilles, pâtes et pois chiches sous une sauce tomate vinaigrée.",
+  "portions": 4,
+  "prep_min": 20,
+  "cuisson_min": 40,
+  "ingredients": [
+    {
+      "ref": "lentille-verte",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 200,
+      "unite": "g"
+    },
+    {
+      "ref": "pates",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "pois-chiche-conserve",
+      "qte": 240,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 60,
+      "unite": "ml"
+    },
+    {
+      "ref": "vinaigre",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "coriandre-moulue",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire les lentilles 15 min dans 1 litre d'eau : elles doivent rester un peu fermes. Égoutte.",
+    "Remets-les dans la casserole avec le riz, la coriandre et une cuillère d'huile. Remue 2 min.",
+    "Couvre d'eau de 2 cm, sale et laisse cuire 15 à 20 min à couvert, jusqu'à absorption.",
+    "Pendant ce temps, fais cuire les pâtes et égoutte-les.",
+    "Émince les oignons finement et fais-les frire dans le reste d'huile jusqu'à ce qu'ils soient bien bruns. Réserve.",
+    "Dans la même poêle, fais revenir l'ail, ajoute les tomates, le cumin, le piment et le vinaigre. Laisse réduire 10 min.",
+    "Sers en couches : riz-lentilles, pâtes, pois chiches, sauce, et les oignons frits par-dessus."
+  ],
+  "variantes": [
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "pates",
+          "par": {
+            "ref": "pates-sans-gluten",
+            "qte": 150,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Chaque élément se garde séparément 3 jours au frigo : on assemble au moment de servir.",
+  "source": {
+    "type": "themealdb",
+    "id": "53027",
+    "url": "https://www.themealdb.com/meal/53027"
+  },
+  "statut": "non-testee"
+}

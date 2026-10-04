@@ -1,0 +1,128 @@
+{
+  "numero": 24,
+  "slug": "spaghetti-bolognaise",
+  "titre": "Spaghetti bolognaise",
+  "chapeau": "La sauce au bœuf que tout le monde connaît, avec une version lentilles pour l'autre moitié de la table.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 35,
+  "ingredients": [
+    {
+      "ref": "oignon",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "ail",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "boeuf-hache",
+      "qte": 500,
+      "unite": "g"
+    },
+    {
+      "ref": "champignon-paris",
+      "qte": 100,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 15,
+      "unite": "g"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "pates",
+      "qte": 350,
+      "unite": "g"
+    },
+    {
+      "ref": "parmesan",
+      "qte": 30,
+      "unite": "g"
+    },
+    {
+      "ref": "herbes-provence",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais revenir les oignons hachés 3 min à feu vif dans l'huile.",
+    "Ajoute l'ail et la viande. Fais dorer en émiettant.",
+    "Ajoute les champignons émincés et les herbes. Laisse 2 min.",
+    "Verse les tomates, le concentré et le cube délayé dans 300 ml d'eau chaude.",
+    "Couvre et laisse mijoter 30 min.",
+    "Fais cuire les pâtes, égoutte-les et mélange-les à la sauce.",
+    "Sers avec le parmesan râpé."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan aux lentilles",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "boeuf-hache",
+          "par": {
+            "ref": "lentille-verte",
+            "qte": 200,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": [
+        "parmesan"
+      ]
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "pates",
+          "par": {
+            "ref": "pates-sans-gluten",
+            "qte": 350,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Foyer mixte : prépare la base oignons-tomates en commun, puis partage-la en deux casseroles, viande d'un côté, lentilles cuites de l'autre.",
+  "source": {
+    "type": "themealdb",
+    "id": "52770",
+    "url": "https://www.themealdb.com/meal/52770"
+  },
+  "statut": "non-testee"
+}

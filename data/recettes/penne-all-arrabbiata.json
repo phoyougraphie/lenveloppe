@@ -1,0 +1,88 @@
+{
+  "numero": 5,
+  "slug": "penne-all-arrabbiata",
+  "titre": "Penne all'arrabbiata",
+  "chapeau": "La sauce tomate piquante qui cuit pendant que les pâtes cuisent.",
+  "portions": 4,
+  "prep_min": 5,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "pates",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "ail",
+      "qte": 3,
+      "unite": "piece"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "basilic",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "herbes-provence",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais bouillir une grande casserole d'eau salée et lance les pâtes.",
+    "Dans une poêle, fais chauffer l'huile et fais revenir l'ail haché 1 min.",
+    "Ajoute les tomates, le piment et les herbes. Laisse bouillonner 5 min.",
+    "Hors du feu, ajoute le basilic ciselé.",
+    "Égoutte les pâtes et mélange-les à la sauce."
+  ],
+  "variantes": [
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "pates",
+          "par": {
+            "ref": "pates-sans-gluten",
+            "qte": 400,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Dose le piment selon les enfants. Un peu de fromage râpé à table pour ceux qui en veulent.",
+  "source": {
+    "type": "themealdb",
+    "id": "52771",
+    "url": "https://www.themealdb.com/meal/52771"
+  },
+  "statut": "non-testee"
+}

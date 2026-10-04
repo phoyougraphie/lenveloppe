@@ -1,0 +1,90 @@
+{
+  "numero": 25,
+  "slug": "spaghetti-carbonara",
+  "titre": "Spaghetti carbonara",
+  "chapeau": "Œufs, lardons, fromage, poivre : pas de crème, c'est l'eau des pâtes qui fait la sauce.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 15,
+  "ingredients": [
+    {
+      "ref": "pates",
+      "qte": 350,
+      "unite": "g"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 5,
+      "unite": "piece"
+    },
+    {
+      "ref": "lardon",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "parmesan",
+      "qte": 50,
+      "unite": "g"
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais bouillir une grande casserole d'eau salée et lance les pâtes.",
+    "Bats 3 œufs entiers et 2 jaunes avec le parmesan râpé et beaucoup de poivre.",
+    "Fais dorer les lardons à sec dans une grande poêle.",
+    "Garde un verre d'eau de cuisson, puis égoutte les pâtes.",
+    "Hors du feu, verse les pâtes dans la poêle des lardons.",
+    "Ajoute le mélange œufs-fromage et un peu d'eau de cuisson. Remue vite pour obtenir une sauce crémeuse."
+  ],
+  "variantes": [
+    {
+      "titre": "Végétarienne aux champignons",
+      "regime": "vegetarien",
+      "remplace": [
+        {
+          "de": "lardon",
+          "par": {
+            "ref": "champignon-paris",
+            "qte": 250,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "pates",
+          "par": {
+            "ref": "pates-sans-gluten",
+            "qte": 350,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "Les deux blancs qui restent se gardent 2 jours au frigo pour une omelette.",
+  "source": {
+    "type": "themealdb",
+    "id": "52982",
+    "url": "https://www.themealdb.com/meal/52982"
+  },
+  "statut": "non-testee"
+}

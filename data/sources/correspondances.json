@@ -1,0 +1,21 @@
+{
+  "_note": "Ingrédient → produit RNM (libellé exact du catalogue). Un ingrédient absent d'ici est cherché dans Open Prices. On ne rattache jamais un produit différent (surgelé ≠ frais, cru ≠ cuit, potimarron ≠ butternut).",
+  "oignon": { "rnm": "Oignon" },
+  "ail": { "rnm": "Ail" },
+  "carotte": { "rnm": "Carotte" },
+  "pomme-de-terre": { "rnm": "Pomme de terre" },
+  "tomate": { "rnm": "Tomate" },
+  "courgette": { "rnm": "Courgette" },
+  "aubergine": { "rnm": "Aubergine" },
+  "poivron": { "rnm": "Poivron" },
+  "poireau": { "rnm": "Poireau" },
+  "champignon-paris": { "rnm": "Champignon de Paris" },
+  "brocoli": { "rnm": "Chou" },
+  "fenouil": { "rnm": "Fenouil" },
+  "citron": { "rnm": "Citron" },
+  "persil": { "rnm": "Persil" },
+  "oeuf": { "rnm": "Oeuf" },
+  "lait": { "rnm": "Lait" },
+  "boeuf-hache": { "rnm": "Boeuf" },
+  "saumon-pave": { "rnm": "Saumon" }
+}

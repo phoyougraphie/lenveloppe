@@ -1,0 +1,79 @@
+{
+  "numero": 22,
+  "slug": "veloute-de-courge-au-lait-de-coco",
+  "titre": "Velouté de courge au lait de coco",
+  "chapeau": "Une courge rôtie, du curry et du lait de coco : la soupe d'automne qui a du goût.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 40,
+  "ingredients": [
+    {
+      "ref": "courge-butternut",
+      "qte": 1200,
+      "unite": "g"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 20,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "lait-coco",
+      "qte": 400,
+      "unite": "ml"
+    },
+    {
+      "ref": "bouillon-cube",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "citron",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "gingembre-moulu",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "curry-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sucre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Préchauffe le four à 200 °C.",
+    "Épluche la courge, coupe-la en cubes et mélange avec la moitié de l'huile et du sel.",
+    "Enfourne 30 min.",
+    "Pendant ce temps, fais fondre l'oignon émincé 8 min dans le reste d'huile avec le gingembre.",
+    "Ajoute le curry et remue 1 min.",
+    "Ajoute la courge, le lait de coco (garde-en 3 cuillères), 800 ml d'eau et le cube. Laisse frémir 5 min.",
+    "Mixe, puis ajoute le jus du demi-citron.",
+    "Sers avec un filet du lait de coco gardé."
+  ],
+  "variantes": [],
+  "note": "Marche aussi avec un potiron ou une autre courge, selon le prix du moment.",
+  "source": {
+    "type": "themealdb",
+    "id": "53210",
+    "url": "https://www.themealdb.com/meal/53210"
+  },
+  "statut": "non-testee"
+}

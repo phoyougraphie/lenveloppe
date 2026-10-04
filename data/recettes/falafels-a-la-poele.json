@@ -1,0 +1,121 @@
+{
+  "numero": 7,
+  "slug": "falafels-a-la-poele",
+  "titre": "Falafels à la poêle",
+  "chapeau": "Des galettes de pois chiches en conserve, écrasées à la fourchette et dorées à la poêle.",
+  "portions": 4,
+  "prep_min": 20,
+  "cuisson_min": 10,
+  "ingredients": [
+    {
+      "ref": "pois-chiche-conserve",
+      "qte": 480,
+      "unite": "g"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "persil",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "oeuf",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-tournesol",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "semoule",
+      "qte": 240,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "coriandre-moulue",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais revenir l'oignon et l'ail hachés 5 min dans un peu d'huile.",
+    "Dans un saladier, écrase les pois chiches égouttés avec l'oignon, le cumin et la coriandre.",
+    "Ajoute le persil haché, l'œuf battu, sale et poivre. Malaxe à la main.",
+    "Forme 12 petites galettes.",
+    "Fais-les dorer 3 min de chaque côté dans le reste d'huile.",
+    "Verse 240 ml d'eau bouillante salée sur la semoule, couvre 5 min puis égraine.",
+    "Sers avec la semoule et les tomates en dés."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [
+        {
+          "de": "oeuf",
+          "par": {
+            "ref": "fecule-mais",
+            "qte": 20,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    },
+    {
+      "titre": "Sans gluten",
+      "regime": "sans-gluten",
+      "remplace": [
+        {
+          "de": "semoule",
+          "par": {
+            "ref": "riz-blanc",
+            "qte": 240,
+            "unite": "g"
+          }
+        }
+      ],
+      "ajoute": [],
+      "retire": []
+    }
+  ],
+  "note": "La pâte se prépare la veille et se garde au frigo, couverte.",
+  "source": {
+    "type": "themealdb",
+    "id": "53266",
+    "url": "https://www.themealdb.com/meal/53266"
+  },
+  "statut": "non-testee"
+}

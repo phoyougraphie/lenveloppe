@@ -1,0 +1,97 @@
+{
+  "numero": 6,
+  "slug": "chili-sin-carne",
+  "titre": "Chili sin carne",
+  "chapeau": "Haricots rouges, légumes et épices : le chili qui ne demande pas de viande pour caler.",
+  "portions": 4,
+  "prep_min": 15,
+  "cuisson_min": 30,
+  "ingredients": [
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "poivron",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "courgette",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "carotte",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "haricot-rouge-conserve",
+      "qte": 500,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "mais-conserve",
+      "qte": 140,
+      "unite": "g"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Coupe l'oignon, le poivron, la courgette et la carotte en petits dés.",
+    "Fais-les revenir 10 min dans l'huile, dans une cocotte.",
+    "Ajoute l'ail, le cumin, le paprika et le piment. Remue 1 min.",
+    "Verse les tomates, les haricots rincés et le maïs.",
+    "Laisse mijoter 20 min à couvert. Sale.",
+    "Pendant ce temps, fais cuire le riz et sers ensemble."
+  ],
+  "variantes": [],
+  "note": "Se congèle très bien. Fais-en le double et garde une boîte pour un soir pressé.",
+  "source": {
+    "type": "themealdb",
+    "id": "52867",
+    "url": "https://www.themealdb.com/meal/52867"
+  },
+  "statut": "non-testee"
+}

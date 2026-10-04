@@ -1,0 +1,60 @@
+---
+import { B } from '../lib/lien';
+import '../styles/global.css';
+import { recettes, prixGenereLe } from '../lib/donnees';
+
+interface Props { titre?: string; description?: string; courant?: string }
+const { titre, description = "Des idées pour manger varié, avec les prix moyens : publics quand ils existent, collaboratifs sinon, toujours sourcés. Toi, tu choisis où mettre le curseur.", courant } = Astro.props;
+const liens = [
+  ['/idees/', 'Idées'],
+  ['/semaine/', 'Semaine'],
+  ['/ajouter/', '+ Ma recette'],
+  ['/sources/', 'D’où viennent nos prix'],
+];
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titre ? `${titre} — L’enveloppe` : 'L’enveloppe'}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={`${B}/favicon.svg`} type="image/svg+xml" />
+    <!-- Niveau de prix choisi : préférence locale, appliquée avant affichage. Aucun cookie, aucun tracker. -->
+    <script is:inline>
+      try { const n = localStorage.getItem('niveau'); if (n) document.documentElement.dataset.niveau = n; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="vh" href="#contenu">Aller au contenu</a>
+    <div class="page">
+      <header class="entete">
+        <a class="logo" href={`${B}/`}>L’enveloppe</a>
+        <nav class="nav" aria-label="Principale">
+          {liens.map(([href, txt]) => <a href={`${B}${href}`} aria-current={courant === href ? 'page' : undefined}>{txt}</a>)}
+        </nav>
+      </header>
+      <main id="contenu">
+        <slot />
+      </main>
+      <footer class="pied">
+        <div>L’enveloppe · projet perso, pour l’entourage<br />gratuit · zéro tracker, zéro publicité</div>
+        <div>{recettes.length} idées · prix mis à jour le {prixGenereLe ?? '—'}</div>
+        <div><a href={`${B}/sources/`}>Sources et méthode</a></div>
+      </footer>
+    </div>
+    <script>
+      // Curseur de niveau : synchronise tous les curseurs de la page et mémorise le choix.
+      document.addEventListener('change', (e) => {
+        const t = e.target as HTMLInputElement;
+        if (t.name !== 'niveau') return;
+        document.documentElement.dataset.niveau = t.value;
+        try { localStorage.setItem('niveau', t.value); } catch {}
+        document.querySelectorAll<HTMLInputElement>('input[name="niveau"]').forEach((i) => (i.checked = i.value === t.value));
+        document.dispatchEvent(new CustomEvent('niveau', { detail: t.value }));
+      });
+      const n = document.documentElement.dataset.niveau ?? 'moyen';
+      document.querySelectorAll<HTMLInputElement>('input[name="niveau"]').forEach((i) => (i.checked = i.value === n));
+    </script>
+  </body>
+</html>

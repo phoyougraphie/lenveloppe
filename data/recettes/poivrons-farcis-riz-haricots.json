@@ -1,0 +1,114 @@
+{
+  "numero": 13,
+  "slug": "poivrons-farcis-riz-haricots",
+  "titre": "Poivrons farcis riz et haricots rouges",
+  "chapeau": "Des poivrons garnis d'une farce riz-haricots-maïs, gratinés au four.",
+  "portions": 4,
+  "prep_min": 20,
+  "cuisson_min": 35,
+  "ingredients": [
+    {
+      "ref": "poivron",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 15,
+      "unite": "ml"
+    },
+    {
+      "ref": "oignon",
+      "qte": 1,
+      "unite": "piece"
+    },
+    {
+      "ref": "ail",
+      "qte": 2,
+      "unite": "piece"
+    },
+    {
+      "ref": "riz-blanc",
+      "qte": 150,
+      "unite": "g"
+    },
+    {
+      "ref": "haricot-rouge-conserve",
+      "qte": 250,
+      "unite": "g"
+    },
+    {
+      "ref": "mais-conserve",
+      "qte": 140,
+      "unite": "g"
+    },
+    {
+      "ref": "tomate-concassee-conserve",
+      "qte": 400,
+      "unite": "g"
+    },
+    {
+      "ref": "emmental-rape",
+      "qte": 100,
+      "unite": "g"
+    },
+    {
+      "ref": "coriandre-fraiche",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Fais cuire le riz et préchauffe le four à 190 °C.",
+    "Coupe les poivrons en deux dans la longueur et épépine-les.",
+    "Enfourne-les 15 min dans un plat pour les attendrir.",
+    "Pendant ce temps, fais revenir l'oignon et l'ail hachés 4 min dans l'huile.",
+    "Ajoute le riz, les haricots rincés, le maïs, les tomates et les épices. Laisse chauffer 5 min.",
+    "Hors du feu, mélange avec les deux tiers du fromage.",
+    "Remplis les poivrons, couvre du reste de fromage et enfourne 15 min.",
+    "Parsème de coriandre."
+  ],
+  "variantes": [
+    {
+      "titre": "Version vegan",
+      "regime": "vegan",
+      "remplace": [],
+      "ajoute": [],
+      "retire": [
+        "emmental-rape"
+      ]
+    }
+  ],
+  "note": "La recette d'origine utilise du quinoa et des haricots noirs ; riz et haricots rouges coûtent moins cher et se trouvent partout.",
+  "source": {
+    "type": "themealdb",
+    "id": "53067",
+    "url": "https://www.themealdb.com/meal/53067"
+  },
+  "statut": "non-testee"
+}

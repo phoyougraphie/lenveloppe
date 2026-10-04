@@ -1,0 +1,83 @@
+{
+  "numero": 23,
+  "slug": "ragout-de-pommes-de-terre-a-l-algeroise",
+  "titre": "Ragoût de pommes de terre à l'algéroise",
+  "chapeau": "Des pommes de terre mijotées dans une sauce tomate à l'ail et au cumin : la chtitha batata.",
+  "portions": 4,
+  "prep_min": 10,
+  "cuisson_min": 30,
+  "ingredients": [
+    {
+      "ref": "ail",
+      "qte": 4,
+      "unite": "piece"
+    },
+    {
+      "ref": "huile-olive",
+      "qte": 30,
+      "unite": "ml"
+    },
+    {
+      "ref": "pomme-de-terre",
+      "qte": 900,
+      "unite": "g"
+    },
+    {
+      "ref": "concentre-tomate",
+      "qte": 30,
+      "unite": "g"
+    },
+    {
+      "ref": "pois-chiche-conserve",
+      "qte": 240,
+      "unite": "g"
+    },
+    {
+      "ref": "persil",
+      "qte": 0.5,
+      "unite": "piece"
+    },
+    {
+      "ref": "cumin",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "paprika",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "piment-poudre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "poivre",
+      "qte": null,
+      "unite": null
+    },
+    {
+      "ref": "sel",
+      "qte": null,
+      "unite": null
+    }
+  ],
+  "etapes": [
+    "Écrase l'ail avec le cumin, le paprika, le piment, le poivre et une pincée de sel pour faire une pâte.",
+    "Mélange cette pâte avec l'huile.",
+    "Fais-la revenir 2 min dans une cocotte jusqu'à ce que ça sente bon.",
+    "Ajoute les pommes de terre coupées en deux et mélange bien.",
+    "Ajoute le concentré, puis de l'eau juste à hauteur.",
+    "Laisse mijoter 20 min, ajoute les pois chiches et laisse 5 min de plus.",
+    "Parsème de persil."
+  ],
+  "variantes": [],
+  "note": "Les pois chiches ne sont pas dans la recette d'origine : ils transforment l'accompagnement en plat complet.",
+  "source": {
+    "type": "themealdb",
+    "id": "53283",
+    "url": "https://www.themealdb.com/meal/53283"
+  },
+  "statut": "non-testee"
+}

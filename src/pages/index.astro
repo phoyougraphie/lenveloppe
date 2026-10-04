@@ -1,0 +1,54 @@
+---
+import { B } from '../lib/lien';
+import Base from '../layouts/Base.astro';
+import Ticket from '../components/Ticket.astro';
+import Curseur from '../components/Curseur.astro';
+import { recettes } from '../lib/donnees';
+---
+<Base courant="/">
+  <section class="accueil">
+    <div class="accueil-texte">
+      <p class="etiquette">Idée du jour</p>
+      <h1 class="titre-xl">Qu’est-ce qu’on mange&nbsp;?</h1>
+      <p class="accroche">Des idées pour manger varié, avec les prix moyens en France&nbsp;: publics quand ils existent, collaboratifs sinon, toujours sourcés. Toi, tu choisis où mettre le curseur.</p>
+      <Curseur />
+      <p class="petit" style="margin-top:.7rem;max-width:26rem">Premier prix = les magasins les moins chers · Moyen = prix moyen en grande surface · Bio. Moyennes France, pas les prix de ton magasin.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem">
+        <button class="bouton" type="button" id="encore">Encore une</button>
+        <a class="bouton creux" href={`${B}/idees/`}>Toutes les idées</a>
+      </div>
+    </div>
+    <div class="accueil-ticket">
+      {recettes.length === 0 && <p class="petit">Les recettes arrivent.</p>}
+      {recettes.map((r, i) => (
+        <Ticket r={r} titreNiveau="h2" lien classe="imprime" hidden={i !== 0} />
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .accueil { display: grid; gap: 2.5rem; padding: 2.5rem 0; }
+  .accroche { font-size: 1.25rem; line-height: 1.35; max-width: 26rem; margin: 1.2rem 0 1.6rem; }
+  @media (min-width: 900px) {
+    .accueil { grid-template-columns: minmax(0, 1fr) minmax(0, 34rem); gap: 4rem; padding-top: 4rem; }
+    .accueil-texte { position: sticky; top: 2rem; align-self: start; }
+  }
+</style>
+
+<script>
+  const tickets = [...document.querySelectorAll<HTMLElement>('.accueil-ticket .ticket')];
+  if (tickets.length) {
+    const jour = Math.floor(Date.now() / 86400000);
+    let courant = jour % tickets.length;
+    const montre = (i: number) => tickets.forEach((t, j) => (t.hidden = j !== i));
+    montre(courant);
+    document.getElementById('encore')?.addEventListener('click', () => {
+      let n = courant;
+      while (tickets.length > 1 && n === courant) n = Math.floor(Math.random() * tickets.length);
+      courant = n;
+      montre(courant);
+      tickets[courant].querySelector('a')?.focus({ preventScroll: true });
+    });
+  }
+</script>

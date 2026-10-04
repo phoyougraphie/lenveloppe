@@ -1,0 +1,12 @@
+---
+import { B } from '../lib/lien';
+import Base from '../layouts/Base.astro';
+---
+<Base titre="Introuvable">
+  <div style="padding:3rem 0" class="prose">
+    <p class="etiquette">Erreur 404</p>
+    <h1 class="titre-xl">Article introuvable</h1>
+    <p style="font-size:1.25rem">Cette page n’est pas sur le ticket.</p>
+    <p><a class="bouton" href={`${B}/idees/`}>Voir les idées</a></p>
+  </div>
+</Base>

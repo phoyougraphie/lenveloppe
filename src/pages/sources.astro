@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import { recettes, ingredients, prix, prixGenereLe, euros, NIVEAUX } from '../lib/donnees';
+
+const methodo = Object.entries(import.meta.glob<{ Content: any; frontmatter: any }>('/docs/methodo-*.md', { eager: true }))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, m]) => m.Content);
+
+// Ingrédients réellement utilisés (recettes + variantes), hors placard
+const utilises = new Set<string>();
+for (const r of recettes) {
+  r.ingredients.forEach((l) => utilises.add(l.ref));
+  for (const v of r.variantes ?? []) {
+    (v.remplace ?? []).forEach((x) => utilises.add(x.par.ref));
+    (v.ajoute ?? []).forEach((x) => utilises.add(x.ref));
+  }
+}
+const lignes = [...utilises]
+  .filter((ref) => ingredients[ref] && !ingredients[ref].placard)
+  .map((ref) => ({ ref, ing: ingredients[ref], p: prix[ref] }))
+  .sort((a, b) => a.ing.nom.localeCompare(b.ing.nom, 'fr'));
+
+const estPublic = (s?: string) => !!s && /RNM|INSEE/i.test(s);
+const nPublic = lignes.filter((l) => l.p?.moyen != null && estPublic(l.p.source)).length;
+const nCollab = lignes.filter((l) => l.p?.moyen != null && !estPublic(l.p.source)).length;
+const nAucun = lignes.length - nPublic - nCollab;
+const pct = (n: number) => (lignes.length ? Math.round((100 * n) / lignes.length) : 0);
+---
+<Base titre="D’où viennent nos prix" courant="/sources/">
+  <div style="padding:2.5rem 0 1rem">
+    <p class="etiquette">Sources · méthode · ce qu’on ne sait pas</p>
+    <h1 class="titre-xl">D’où viennent nos prix</h1>
+  </div>
+
+  <div class="prose">
+    <p style="font-size:1.25rem;line-height:1.4">Les prix affichés sont des <strong>moyennes en France</strong>, pas ceux de ton magasin. Ton ticket réel sera un peu différent. Voilà d’où on les tient, et ce qu’on ne sait pas.</p>
+
+    <h2>Couverture aujourd’hui</h2>
+    <div class="ticket" style="margin:1rem 0 1.5rem">
+      <div class="ligne"><span class="lib"><span>Ingrédients utilisés</span></span><span class="val">{lignes.length}</span></div>
+      <div class="ligne"><span class="lib"><span>Prix public (État)</span></span><span class="val">{nPublic} · {pct(nPublic)} %</span></div>
+      <div class="ligne"><span class="lib"><span>Prix collaboratif</span></span><span class="val">{nCollab} · {pct(nCollab)} %</span></div>
+      <div class="ligne"><span class="lib"><span>Prix non suivi</span></span><span class="val">{nAucun} · {pct(nAucun)} %</span></div>
+      <hr />
+      <p class="petit" style="margin:0">Calculé au niveau « moyen » · prix mis à jour le {prixGenereLe ?? '—'}</p>
+    </div>
+
+    {methodo.map((Content) => <Content />)}
+
+    <h2>Chaque ingrédient, sa source</h2>
+    <p>Prix au kilo (ou au litre, ou à la pièce). — veut dire qu’aucune source fiable ne le suit : on n’invente pas.</p>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Ingrédient</th><th>1er prix</th><th>Moyen</th><th>Bio</th><th>Source</th></tr></thead>
+        <tbody>
+          {lignes.map(({ ing, p }) => (
+            <tr>
+              <td>{ing.nom}</td>
+              {NIVEAUX.map((n) => <td>{p ? `${euros(p[n])}` : '—'}</td>)}
+              <td>{p ? <Fragment>{p.url ? <a href={p.url}>{p.source}</a> : p.source}{p.periode && <><br />{p.periode}</>} · €/{p.unite === 'piece' ? 'pièce' : p.unite}</Fragment> : 'non suivi'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Base>

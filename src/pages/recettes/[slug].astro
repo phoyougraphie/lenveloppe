@@ -1,0 +1,110 @@
+---
+import { B } from '../../lib/lien';
+import Base from '../../layouts/Base.astro';
+import Ticket from '../../components/Ticket.astro';
+import Curseur from '../../components/Curseur.astro';
+import Montants from '../../components/Montants.astro';
+import { recettes, ingredients, ecartVariante, regimesDe, appliquerVariante, LIBELLE_REGIME, libelleQuantite, type Recette } from '../../lib/donnees';
+
+export function getStaticPaths() {
+  return recettes.map((r) => ({ params: { slug: r.slug }, props: { r } }));
+}
+const { r } = Astro.props as { r: Recette };
+const nomIng = (ref: string) => (ingredients[ref]?.nom ?? ref).toLowerCase();
+const variantes = (r.variantes ?? []).map((v) => {
+  const lignes = appliquerVariante(r.ingredients, v);
+  const regimes = regimesDe(lignes, r.portions);
+  const phrases = [
+    ...(v.remplace ?? []).map((x) => `remplace ${nomIng(x.de)} par ${nomIng(x.par.ref)}${x.par.qte ? ` (${libelleQuantite(x.par).toLowerCase()})` : ''}`),
+    ...(v.ajoute ?? []).map((x) => `ajoute ${nomIng(x.ref)}${x.qte ? ` (${libelleQuantite(x).toLowerCase()})` : ''}`),
+    ...(v.retire ?? []).map((x) => `retire ${nomIng(x)}`),
+  ];
+  return { v, regimes, phrases, ecart: ecartVariante(r, v) };
+});
+---
+<Base titre={r.titre} description={r.chapeau}>
+  <div class="fiche">
+    <div class="fiche-ticket">
+      <div class="outils">
+        <Curseur />
+        <button class="bouton creux" type="button" onclick="window.print()">Imprimer le ticket</button>
+        <button class="bouton" type="button" id="ajout" data-slug={r.slug}>Ajouter à ma semaine</button>
+      </div>
+      <Ticket r={r} />
+    </div>
+
+    <div class="fiche-texte">
+      {r.note && <p class="annotation" style="margin:0 0 2rem">{r.note}</p>}
+
+      <p class="etiquette">Préparation</p>
+      <ol class="etapes">{r.etapes.map((e) => <li>{e}</li>)}</ol>
+
+      {variantes.length > 0 && (
+        <section style="margin-top:2.5rem">
+          <p class="etiquette">Variantes · pour une table où on ne mange pas pareil</p>
+          {variantes.map(({ v, regimes, phrases, ecart }) => (
+            <div class="variante">
+              <h2 class="titre-m">{v.titre}</h2>
+              <p style="margin:.35rem 0">{phrases.map((p, i) => (i === 0 ? p[0].toUpperCase() + p.slice(1) : p)).join(', ')}.</p>
+              <div class="ligne trois">
+                <span>Écart sur le total</span>
+                <Montants m={ecart} signe />
+              </div>
+              <p class="petit" style="margin:.3rem 0 0">Devient : {regimes.map((x) => LIBELLE_REGIME[x]).join(' · ') || 'aucun régime particulier'}</p>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {regimesDe(r.ingredients, r.portions).includes('sans-gluten') && (
+        <p class="petit" style="margin-top:2.5rem">Sans gluten d’après la nature des ingrédients. Chorizo, bouillon, épices peuvent contenir des traces : si tu es cœliaque, vérifie les étiquettes.</p>
+      )}
+      {r.source?.type === 'themealdb' && (
+        <p class="petit" style="margin-top:2.5rem">Idée d’origine : <a href={r.source.url}>TheMealDB</a>, adaptée en français et en grammes par nous.</p>
+      )}
+      <p style="margin-top:2rem"><a class="bouton creux" href={`${B}/idees/`}>← Autres idées</a></p>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const b = document.getElementById('ajout') as HTMLButtonElement;
+  const lire = (): string[] => { try { return JSON.parse(localStorage.getItem('semaine') ?? '[]'); } catch { return []; } };
+  const maj = () => {
+    const s = lire();
+    const dedans = s.includes(b.dataset.slug!);
+    b.textContent = dedans ? 'Dans ma semaine ✓' : s.length >= 5 ? 'Semaine pleine (5)' : 'Ajouter à ma semaine';
+    b.disabled = !dedans && s.length >= 5;
+  };
+  b.addEventListener('click', () => {
+    let s = lire();
+    s = s.includes(b.dataset.slug!) ? s.filter((x) => x !== b.dataset.slug) : [...s, b.dataset.slug!].slice(0, 5);
+    try { localStorage.setItem('semaine', JSON.stringify(s)); } catch {}
+    maj();
+  });
+  maj();
+</script>
+
+<style>
+  .fiche { display: grid; gap: 2.5rem; padding: 2rem 0; }
+  .outils { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.4rem; align-items: center; }
+  .variante { padding: 1rem 0; border-bottom: 1.5px dashed var(--encre); }
+  @media (min-width: 960px) {
+    .fiche { grid-template-columns: minmax(0, 34rem) minmax(0, 1fr); gap: 4.5rem; padding-top: 3rem; }
+    .fiche-texte { padding-top: 4.5rem; }
+  }
+  /* Impression : le ticket seul, au format rouleau 80 mm */
+  @media print {
+    @page { size: 80mm auto; margin: 4mm; }
+    :global(.entete), :global(.pied), .outils, .fiche-texte { display: none !important; }
+    :global(body) { background: #fff; font-size: 11px; }
+    :global(.page) { padding: 0; }
+    .fiche { display: block; padding: 0; }
+    :global(.ticket) { -webkit-mask: none; mask: none; filter: none; background: #fff; padding: 0; max-width: none; }
+    :global(.ticket .titre-l) { font-size: 22px; }
+    :global(.ligne), :global(.mono) { font-size: 10.5px; }
+    :global(.val .n) { display: inline !important; font-weight: 400 !important; text-decoration: none !important; min-width: 0 !important; }
+    :global(.val .sep) { display: inline !important; }
+    :global(.point) { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+</style>
